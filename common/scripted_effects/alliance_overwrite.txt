@@ -1,0 +1,14 @@
+try_remove_dynastic_alliance_opinion_effect = {
+	if = {
+		limit = {
+			has_opinion_modifier = {
+				modifier = dynastic_alliance_opinion
+				target = $TARGET$
+			}
+		}
+		remove_opinion = {
+			modifier = dynastic_alliance_opinion
+			target = $TARGET$
+		}
+	}
+}

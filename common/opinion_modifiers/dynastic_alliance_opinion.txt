@@ -1,0 +1,3 @@
+﻿dynastic_alliance_opinion = {
+	opinion = 20
+}

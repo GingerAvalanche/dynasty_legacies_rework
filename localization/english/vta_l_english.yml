@@ -1,0 +1,27 @@
+﻿l_english:
+ rule_vta_mode_game_rules:0 "VtA - Addresse"
+ setting_vta_rule_defender:0 "Defender"
+ setting_vta_rule_defender_desc:0 "Only the affected defender's vassals are called to arms."
+ setting_vta_rule_both:0 "Defender & Attacker"
+ setting_vta_rule_both_desc:0 "On both sides, the affected attacker's & defender's vassals are called to arms."
+ setting_vta_rule_attacker:0 "Attacker"
+ setting_vta_rule_attacker_desc:0 "Only the affected attackers's vassals are called to arms."
+
+ rule_vta_affected_game_rules:0 "VtA - Affected"
+ setting_vta_rule_land_subject:0 "Title Loss & Vassalization"
+ setting_vta_rule_land_subject_desc:0 "All realm rulers that would lose a title or would get a new direct liege are called to war."
+ setting_vta_rule_land:0 "Title Loss"
+ setting_vta_rule_land_desc:0 "All realm rulers that would lose a title are called to war."
+
+ vassals_to_arms.0001.t:0 "Vassals to Arms"
+ vassals_to_arms.0001.desc:0 "The Realm is threatened by [attacker.GetTitledFirstName] and [attacker.GetSheHe] targets the title [war_target_title.GetName]. Some of your titles and belongings are on the line as well, my loyal vassal. Join me in defending what is ours! \n\n Signed [defender.GetTitledFirstName]"
+ vassals_to_arms.0001.a:0 "Defend your titles against [attacker.GetTitledFirstName]"
+ vassals_to_arms.0001.b:0 "Don't join as a defender against [attacker.GetTitledFirstName]"
+
+ vassals_to_arms.0002.t:0 "Vassals to Arms"
+ vassals_to_arms.0002.desc:0 "I am waging war against [defender.GetTitledFirstName] to press your claim on the [war_target_title.GetName].\nAre you willing to join this war and help me in this fight for what should be rightful yours.\n\nMay we strengthen our glorious realm together."
+ vassals_to_arms.0002.a:0 "Join the war to help press your claim [war_target_title.GetName]"
+ vassals_to_arms.0002.b:0 "Don't join as a attacker against [defender.GetTitledFirstName]"
+
+ FACTIONS_WINDOW_DISCONTENT_TO_WEAK:1 "Too weak [Faction.GetPower|0]/[Faction.MakeScope.ScriptValue('vta_faction_power_threshold')|0]"
+ VTA_FACTION_POWER_ADD:0 "More subjects will most likely join"

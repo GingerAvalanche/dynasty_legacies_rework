@@ -1,0 +1,28 @@
+﻿
+usury_sin_mod1 = {
+	icon = piety_negative
+	
+	monthly_piety_gain_mult = -0.2
+	monthly_dynasty_prestige_mult = -0.2
+}
+
+usury_sin_mod2 = {
+	icon = piety_negative
+
+	monthly_piety_gain_mult = -0.4
+	monthly_dynasty_prestige_mult = -0.4
+}
+
+usury_sin_mod3 = {
+	icon = piety_negative
+	
+	monthly_piety_gain_mult = -0.6
+	monthly_dynasty_prestige_mult = -0.6
+}
+
+usury_sin_mod4 = {
+	icon = piety_negative
+	
+	monthly_piety_gain_mult = -0.8
+	monthly_dynasty_prestige_mult = -0.8
+}

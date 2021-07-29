@@ -1,0 +1,780 @@
+﻿#########################################################################################
+#RANDOM EVENTS
+#########################################################################################
+
+
+namespace = cbas_RND_prestige_event
+
+
+#########################################################################################
+#Buy favor from the court events
+#########################################################################################
+
+######################################################################
+#Buy favor from the court events----------------------------------------kight of great value
+#######################################################################
+cbas_RND_prestige_event.1 = { 
+	
+	type = character_event
+	title = knight_random_event_title
+	desc = knight_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:knight_CRE_scope
+		  animation = admiration
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#-------------------------------generate Knight
+				location = root.capital_province
+				age = { 16 30 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				prowess = { 12 20 }
+				
+				save_scope_as = knight_CRE_scope
+				
+				random_traits_list = {
+					count = 1
+					education_martial_3 = {}
+					education_martial_4 = {}
+				}
+				random_traits_list = {
+					count = 3
+					zealous = {}
+					sadistic = {}
+					vengeful = {}
+					brave = {}
+					wrathful = {}
+				}
+				random_traits = no
+			}
+			scope:knight_CRE_scope = {
+				random_list = {
+					4 = { }
+					3 = { add_trait = physique_good_1 }
+					2 = { add_trait = physique_good_2 }
+					1 = { add_trait = physique_good_3 }
+					
+				}
+				
+			}			
+		}
+	}
+#------------------------------------------------------end gen
+
+	option = { # help
+		 name = knight_random_event_op_help
+		 show_as_tooltip = {
+			custom_tooltip = knight_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_prestige = 50
+			add_diplomacy_lifestyle_xp = 80
+			custom_tooltip = random_event_spread
+		 }
+		 hidden_effect = {
+			scope:knight_CRE_scope = { add_gold = 150 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_prestige = 50
+			add_diplomacy_lifestyle_xp = 80
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.1
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! and get favor hook
+		 name = knight_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = knight_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_hook = {
+				type = favor_hook
+				target = scope:knight_CRE_scope
+			}
+		 }
+		 hidden_effect = {
+			add_courtier = scope:knight_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_hook = {
+				type = favor_hook
+				target = scope:knight_CRE_scope
+			}
+		 }
+		
+		 
+	}
+	option = { # out of my sight
+		 name = knight_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = knight_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = -50
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = -50
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	
+}
+#---------------------------------------------
+		
+####################################################################
+#Buy favor from the court events-------------------------------Cpt Hook (noble50/50 female) LOYAL HOOK
+####################################################################
+cbas_RND_prestige_event.2 = { 
+	
+	type = character_event
+	title = noblehook_random_event_title
+	desc = noblehook_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:noblehook_CRE_scope
+		  animation = beg
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate noble
+				location = root.capital_province
+				age = { 16 25 }
+				gender_female_chance = 50
+				faith = root.faith
+				culture = root.culture
+				
+				save_scope_as = noblehook_CRE_scope
+				diplomacy = { 7 9 }
+				stewardship = { 7 9 }
+				random_traits_list = {
+					count = 1
+					education_diplomacy_4 = {}
+					education_stewardship_4 = {}
+					education_intrigue_4 = {}
+					education_diplomacy_3 = {}
+					education_stewardship_3 = {}
+					education_intrigue_3 = {}
+				}
+				random_traits_list = {
+					count = 3
+					temperate = {}
+					ambitious = {}
+					diligent = {}
+					honest = {}
+					gregarious = {}
+					calm = {}
+					trusting= {}
+				}
+				random_traits = no
+			}
+				scope:noblehook_CRE_scope = {
+					random_list = {
+						1 = { add_trait = intellect_good_1 }
+						2 = { add_trait = intellect_good_2 }
+						1 = { add_trait = beauty_good_1 }
+					
+				}
+				
+			}			
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = noblehook_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = noblehook_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 25
+			add_prestige = 50
+			add_diplomacy_lifestyle_xp = 100
+			custom_tooltip = random_event_spread			
+		 }
+		 hidden_effect = {
+			scope:noblehook_CRE_scope = { add_gold = 250 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 25
+			add_prestige = 50
+			add_diplomacy_lifestyle_xp = 100
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_prestige_event.1
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! and get LOYAL hook
+		 name = noblehook_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = noblehook_random_event_op_welcome_t
+			remove_short_term_gold = 25
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_hook = {
+				type = loyalty_hook
+				target = scope:noblehook_CRE_scope
+			}			
+		 }
+		 hidden_effect = {
+			scope:noblehook_CRE_scope = { add_gold = 250 }
+			add_courtier = scope:noblehook_CRE_scope
+			remove_short_term_gold = 25
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_hook = {
+				type = loyalty_hook
+				target = scope:noblehook_CRE_scope
+			}
+			
+		 }
+		
+		 
+	}
+	option = { # out of my sight
+		 name = noblehook_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = noblehook_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = -80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	
+}
+#####################################################################		
+#Buy favor from the court events---------------------------------Random (nobleman high skills) FAVOR HOOK
+#####################################################################
+cbas_RND_prestige_event.3 = { 
+	
+	type = character_event
+	title = nobleRND_random_event_title
+	desc = nobleRND_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:nobleRND_CRE_scope
+		  animation = beg
+		  
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate noble
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				
+				save_scope_as = nobleRND_CRE_scope
+				
+				diplomacy = { 7 9 }
+				stewardship = { 7 9 }
+				learning = { 7 9 }
+				
+				random_traits_list = {
+					count = 1
+					education_diplomacy_4 = {}
+					education_stewardship_4 = {}
+									}
+				random_traits_list = {
+					count = 3
+					temperate = {}
+					ambitious = {}
+					diligent = {}
+					gregarious = {}
+					calm = {}
+					cynical = {}
+				}
+				random_traits = no
+			}
+				scope:nobleRND_CRE_scope = {
+					random_list = {
+						1 = { add_trait = intellect_good_1 }
+						1 = { add_trait = intellect_good_2 }						
+				}
+				
+			}			
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = nobleRND_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = nobleRND_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 25
+			add_prestige = 50
+			add_diplomacy_lifestyle_xp = 100
+			custom_tooltip = random_event_spread
+		 }
+		 hidden_effect = {
+			scope:nobleRND_CRE_scope = { add_gold = 250 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 25
+			add_prestige = 50
+			add_diplomacy_lifestyle_xp = 100
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_prestige_event.1
+						days = { 5 6 }
+						}
+					}
+					
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.4
+						days = { 5 6 }
+						}
+					}
+				
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! and get favor hook
+		 name = nobleRND_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = nobleRND_random_event_op_welcome_t
+			remove_short_term_gold = 25
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_hook = {
+				type = favor_hook
+				target = scope:nobleRND_CRE_scope
+			}
+		 }
+		 hidden_effect = {
+			scope:nobleRND_CRE_scope = { add_gold = 250 }
+			add_courtier = scope:nobleRND_CRE_scope
+			remove_short_term_gold = 25
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_hook = {
+				type = favor_hook
+				target = scope:nobleRND_CRE_scope
+			}
+		 }		 
+	}
+	option = { # out of my sight
+		 name = nobleRND_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = nobleRND_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = -50
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = -50
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	
+}
+###########################################################################		
+#Buy favor from the court events---------------------------------------------beggar (intrigue) LOYAL HOOK
+###########################################################################
+cbas_RND_prestige_event.4 = { 
+	
+	type = character_event
+	title = beggar_random_event_title
+	desc = beggar_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:beggar_CRE_scope
+		  animation = beg
+		  outfit_tags = { beggar_rags }
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate beggar
+				location = root.capital_province
+				age = { 30 45 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = beggar_CRE_scope
+				
+				intrigue = { 9 12 }
+				
+				random_traits_list = {
+					count = 1
+					education_intrigue_4 = {}
+					education_intrigue_3 = {}
+									}
+				random_traits_list = {
+					count = 3
+					callous = {}
+					diligent = {}
+					arbitrary = {}
+					cynical = {}
+					deceitful = {}
+					paranoid = {}
+				}
+				random_traits = no
+			}
+				scope:beggar_CRE_scope = {
+					random_list = {
+						1 = { add_trait = drunkard }
+						1 = { add_trait = lunatic_genetic }
+					}
+				}
+				scope:beggar_CRE_scope = {
+					random_list = {
+						1 = { add_trait = reveler_2 }
+						1 = { add_trait = reveler_3 }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = beggar_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = beggar_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_prestige = 20
+			add_diplomacy_lifestyle_xp = 50
+			custom_tooltip = random_event_spread
+		 }
+		 hidden_effect = {
+			scope:beggar_CRE_scope = { add_gold = 50 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_prestige = 20
+			add_diplomacy_lifestyle_xp = 50
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_prestige_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! and get favor hook
+		 name = beggar_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = beggar_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_hook = {
+				type = favor_hook
+				target = scope:beggar_CRE_scope
+			}
+		 }
+		 hidden_effect = {
+			scope:beggar_CRE_scope = { add_gold = 5 }
+			add_courtier = scope:beggar_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_hook = {
+				type = favor_hook
+				target = scope:beggar_CRE_scope
+			}
+		 }
+		
+		 
+	}
+	option = { # out of my sight
+		 name = beggar_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = beggar_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = 80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = 80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	
+}
+
+#####################################################################################################
+#####################################################################################################
+#       outfit_tags = { beggar_rags }
+#       dread_exchange_reward_value
+#	    outfit_tags = { monk_outfit }
+#       outfit_tags = { no_clothes }
+#       gender_female_chance = 50
+#       indebted_hook/favor_hook
+#       faith = faith:waldensian

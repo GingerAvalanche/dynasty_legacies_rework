@@ -1,0 +1,39 @@
+﻿
+
+
+slightly_higher_monthly_gain = {
+	title_creation_cost_mult = -0.25
+	monthly_tyranny = -0.05
+	stress_gain_mult = -0.25
+	short_reign_duration_mult = -0.25
+	health = 0.25
+	dread_baseline_add = 10
+#	monthly_dynasty_prestige = 25
+	hide_effects = no
+}
+higher_monthly_gain = {
+	title_creation_cost_mult = -0.50
+	monthly_tyranny = -0.10
+	stress_gain_mult = -0.50
+	dread_baseline_add = 20
+	short_reign_duration_mult = -0.50
+	health = 0.50
+	hide_effects = no
+}
+
+slightly_higher_monthly_gain_player = {
+#	monthly_tyranny = 0.05
+	monthly_lifestyle_xp_gain_mult = -0.25
+	stress_gain_mult = 0.25
+	stress_loss_mult = -0.25
+	hide_effects = no
+}
+higher_monthly_gain_player = {
+#	monthly_tyranny = 0.10
+	monthly_lifestyle_xp_gain_mult = -0.50
+	stress_gain_mult = 0.50
+	stress_loss_mult = -0.50
+	hide_effects = no
+}
+
+

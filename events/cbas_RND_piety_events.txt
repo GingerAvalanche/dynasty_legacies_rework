@@ -1,0 +1,1259 @@
+﻿#########################################################################################
+#RANDOM EVENTS
+#########################################################################################
+
+
+namespace = cbas_RND_piety_event
+
+
+
+#########################################################################################
+#Donate to a small church EVENTS
+#########################################################################################
+
+#######################################################################		
+#Donate to a small church----------------------------------------------------------beggar (intrigue/learning) 
+#######################################################################
+cbas_RND_piety_event.1 = { 
+	
+	type = character_event
+	title = beggarPiety_random_event_title
+	desc = beggarPiety_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:beggarPiety_CRE_scope
+		  animation = beg
+		  outfit_tags = { beggar_rags }
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate beggar
+				location = root.capital_province
+				age = { 40 55 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = beggarPiety_CRE_scope
+				
+				intrigue = { 9 10 }
+				learning = { 9 10 }
+				
+				random_traits_list = {
+					count = 1
+					education_intrigue_4 = {}
+					education_intrigue_3 = {}
+									}
+				random_traits_list = {
+					count = 3
+					calm = {}
+					diligent = {}
+					arbitrary = {}
+					zealous = {}
+					content = {}
+					paranoid = {}
+					trusting = {}
+				}
+				random_traits = no
+			}
+				scope:beggarPiety_CRE_scope = {
+					random_list = {
+						1 = { add_trait = reveler_2
+							  add_trait = drunkard  }
+						1 = { add_trait = reveler_3 
+						      add_trait = drunkard }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = beggarPiety_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			custom_tooltip = random_event_spread
+			
+		 }
+		 hidden_effect = {
+			scope:beggarPiety_CRE_scope = { add_gold = 50 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.2
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.5
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.6
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! 
+		 name = beggarPiety_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_piety = 50
+		}
+		 hidden_effect = {
+			scope:beggarPiety_CRE_scope = { add_gold = 50 }
+			add_courtier = scope:beggarPiety_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_piety = 50
+		}
+		
+		 
+	}
+	option = { # out of my sight
+		 name = beggarPiety_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = 80
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = 80
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	option = { # EXECUTE
+		 name = beggarPiety_random_event_op_execute
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety_random_event_op_execute_t	
+			
+			stress_impact = {
+				zealous = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				
+			}
+			scope:beggarPiety_CRE_scope = {
+			death = {
+				death_reason = death_burned
+				killer = root
+				}
+			}
+			add_prestige = 100
+			add_piety = -100
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				zealous = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+			 }
+			scope:beggarPiety_CRE_scope = {
+			death = {
+				death_reason = death_execution
+				killer = root
+				}
+			}
+			add_prestige = 100
+			add_piety = -100
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	
+}
+
+##########################################################################		
+##Donate to a small church----------------------------------------------beggar (diplomacy/learning) physician 
+##########################################################################
+cbas_RND_piety_event.2 = { 
+	
+	type = character_event
+	title = beggarPiety2_random_event_title
+	desc = beggarPiety2_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:beggarPiety2_CRE_scope
+		  animation = beg
+		  outfit_tags = { beggar_rags }
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate beggar
+				location = root.capital_province
+				age = { 25 55 }
+				gender_female_chance = 60
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = beggarPiety2_CRE_scope
+				
+				diplomacy = { 9 10 }
+				learning = { 9 12 }
+				
+				random_traits_list = {
+					count = 1
+					education_learning_4 = {}
+					education_diplomacy_4 = {}
+					education_learning_3 = {}
+					education_diplomacy_3 = {}
+									}
+				random_traits_list = {
+					count = 3
+					calm = {}
+					diligent = {}
+					forgiving = {}
+					zealous = {}
+					content = {}
+					gregarious = {}
+					trusting = {}
+				}
+				random_traits = no
+			}
+				scope:beggarPiety2_CRE_scope = {
+					random_list = {
+						1 = { add_trait = physician_4
+							add_trait = reveler_3 }
+							  
+						1 = { add_trait = physician_3
+							add_trait = reveler_2 }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = beggarPiety2_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety2_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			custom_tooltip = random_event_spread
+			
+		 }
+		 hidden_effect = {
+			scope:beggarPiety2_CRE_scope = { add_gold = 50 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.5
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.6
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! 
+		 name = beggarPiety2_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety2_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_piety = 80
+		}
+		 hidden_effect = {
+			scope:beggarPiety2_CRE_scope = { add_gold = 50 }
+			add_courtier = scope:beggarPiety2_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_piety = 80
+		}
+		
+		 
+	}
+	option = { # out of my sight
+		 name = beggarPiety2_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = beggarPiety2_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = 80
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = 80
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	
+}
+##########################################################################		
+##Donate to a small church----------------------------------------------MONK (diplomacy/learning--- drunkard) physician
+##########################################################################
+cbas_RND_piety_event.3 = { 
+	
+	type = character_event
+	title = monk_random_event_title
+	desc = monk_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:monk_CRE_scope
+		  animation = beg
+		  outfit_tags = { monk_outfit }
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate monk
+				location = root.capital_province
+				age = { 25 55 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = monk_CRE_scope
+				
+				diplomacy = { 9 10 }
+				learning = { 9 12 }
+				
+				random_traits_list = {
+					count = 1
+					education_learning_4 = {}
+					education_learning_3 = {}
+					}
+				random_traits_list = {
+					count = 3
+					calm = {}
+					diligent = {}
+					forgiving = {}
+					zealous = {}
+					content = {}
+					gregarious = {}
+					trusting = {}
+				}
+				random_traits = no
+			}
+				scope:monk_CRE_scope = {
+					random_list = {
+						1 = { add_trait = reveler_3
+						      add_trait = physician_2
+							  add_trait = drunkard
+                              add_trait = devoted }
+							  
+						1 = { add_trait = reveler_2
+                              add_trait = physician_3						
+						      add_trait = drunkard 
+							  add_trait = devoted }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = monk_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = monk_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			custom_tooltip = random_event_spread
+			
+		 }
+		 hidden_effect = {
+			scope:monk_CRE_scope = { add_gold = 50 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 5
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.5
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.6
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! 
+		 name = monk_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = monk_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_piety = 50
+		}
+		 hidden_effect = {
+			scope:monk_CRE_scope = { add_gold = 50 }
+			add_courtier = scope:monk_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			add_prestige = -80
+			add_piety = 50
+		}
+		
+		 
+	}
+	option = { # out of my sight
+		 name = monk_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = monk_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = 80
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = 80
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+	option = { # EXECUTE
+		 name = monk_random_event_op_execute
+		 
+		 show_as_tooltip = {
+			custom_tooltip = monk_random_event_op_execute_t	
+			
+			stress_impact = {
+				zealous = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+			}
+			scope:monk_CRE_scope = {
+			death = {
+				death_reason = death_burned
+				killer = root
+				}
+			}
+		
+			add_prestige = 100
+			add_piety = -100
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				zealous = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+			 }
+			scope:monk_CRE_scope = {
+			death = {
+				death_reason = death_execution
+				killer = root
+				}
+			}
+			add_prestige = 100
+			add_piety = -100
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+}
+##########################################################################		
+##Donate to a small church----------------------------------------------MONK (diplomacy/learning)  physician
+##########################################################################
+cbas_RND_piety_event.4 = { 
+	
+	type = character_event
+	title = monk2_random_event_title
+	desc = monk2_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:monk2_CRE_scope
+		  animation = beg
+		  outfit_tags = { monk_outfit }
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate monk
+				location = root.capital_province
+				age = { 25 55 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = monk2_CRE_scope
+				
+				diplomacy = { 9 12 }
+				learning = { 9 12 }
+				
+				random_traits_list = {
+					count = 1
+					education_learning_4 = {}
+					education_diplomacy_4 = {}
+					}
+				random_traits_list = {
+					count = 3
+					calm = {}
+					diligent = {}
+					forgiving = {}
+					zealous = {}
+					content = {}
+					trusting = {}
+					chaste = {}
+					honest = {}
+				}
+				random_traits = no
+			}
+				scope:monk2_CRE_scope = {
+					random_list = {
+						1 = { add_trait = physician_2
+							  add_trait = devoted }
+							  
+						1 = { add_trait = physician_3						
+						      add_trait = devoted }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = monk2_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = monk2_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			custom_tooltip = random_event_spread
+			
+		 }
+		 hidden_effect = {
+			scope:monk2_CRE_scope = { add_gold = 150 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			add_learning_lifestyle_xp = 25
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.5
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.6
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! 
+		 name = monk2_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = monk2_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_prestige = 80
+			add_piety = 50
+		}
+		 hidden_effect = {
+			scope:monk2_CRE_scope = { add_gold = 150 }
+			add_courtier = scope:monk2_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_prestige = 80
+			add_piety = 50
+		}
+		
+		 
+	}
+	option = { # out of my sight
+		 name = monk2_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = monk2_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+}
+
+##########################################################################		
+##Donate to a small church----------------------------------------------MONK knight(martial/learning) holy_warrior
+##########################################################################
+cbas_RND_piety_event.5 = { 
+	
+	type = character_event
+	title = monkknigth_random_event_title
+	desc = monkknigth_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:monkknigth_CRE_scope
+		  animation = beg
+		  outfit_tags = { monk_outfit }
+	 }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate monk
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = monkknigth_CRE_scope
+				prowess = { 12 20 }
+				
+				martial = { 9 12 }
+				learning = { 9 10 }
+				
+				random_traits_list = {
+					count = 1
+					education_martial_4 = {}
+					education_martial_3 = {}
+					}
+				random_traits_list = {
+					count = 3
+					brave = {}
+					diligent = {}
+					zealous = {}
+				}
+				random_traits = no
+			}
+				scope:monkknigth_CRE_scope = {
+					random_list = {
+						1 = { add_trait = physique_good_3
+							  add_trait = holy_warrior }
+  
+						1 = { add_trait = physique_good_2
+							  add_trait = holy_warrior }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	
+	option = { # Welcome! 
+		 name = monkknigth_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = monk2_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+				zealous = medium_stress_impact_loss
+			}
+				custom_tooltip = random_event_spread
+			}
+		 hidden_effect = {
+			add_courtier = scope:monkknigth_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+				zealous = medium_stress_impact_loss
+			}
+		
+		random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.6
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+		}
+	}
+	option = { # out of my sight
+		 name = monkknigth_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = monk2_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_piety = -80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+}
+##########################################################################		
+##Donate to a small church----------------------------------------------wench  intrigue\stewardship
+##########################################################################
+cbas_RND_piety_event.6 = { 
+	
+	type = character_event
+	title = wench_random_event_title
+	desc = wench_random_event_desc
+	
+	 override_background = {
+			 event_background = courtyard
+	}
+	
+	theme = diplomacy_majesty_focus 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:wench_CRE_scope
+		  animation = beg
+     }
+
+	 immediate = {
+		 
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}		 
+		 
+		hidden_effect = {
+			create_character = {#----------------------generate wench
+				location = root.capital_province
+				age = { 18 25 }
+				gender = female
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = wench_CRE_scope
+				
+				intrigue = { 9 12 }
+				stewardship = { 9 12 }
+				
+				random_traits_list = {
+					count = 1
+					education_intrigue_4 = {}
+					education_intrigue_3 = {}
+					}
+				random_traits_list = {
+					count = 3
+					vengeful = {}
+					diligent = {}
+					deceitful = {}
+					zealous = {}
+					ambitious = {}
+					trusting = {}
+				}
+				random_traits = no
+			}
+				scope:wench_CRE_scope = {
+					random_list = {
+						1 = { add_trait = beauty_good_3
+							  add_trait = reveler_2
+							  add_trait = fornicator }
+							  
+						1 = { add_trait = beauty_good_2	
+							  add_trait = reveler_3
+						      add_trait = fornicator }						
+					}
+				}
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = wench_random_event_op_help
+		 
+		 show_as_tooltip = {
+			custom_tooltip = wench_random_event_op_help_t
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			custom_tooltip = random_event_spread
+			
+		 }
+		 hidden_effect = {
+			scope:wench_CRE_scope = { add_gold = 150 }
+			stress_impact = {
+				greedy = medium_stress_impact_gain
+				cynical = minor_stress_impact_gain
+				content = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+			remove_short_term_gold = 15
+			add_piety = 50
+			add_diplomacy_lifestyle_xp = 25
+			
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.2
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.3
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.4
+						days = { 5 6 }
+						}
+					}
+				1 = { trigger_event = {
+						id = cbas_RND_piety_event.5
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+	option = { # Welcome! 
+		 name = wench_random_event_op_welcome
+		 show_as_tooltip = {
+			custom_tooltip = wench_random_event_op_welcome_t
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+				lustful = medium_stress_impact_loss
+			}
+			
+			add_prestige = -80
+			
+			add_hook = {
+				type = favor_hook
+				target = scope:wench_CRE_scope
+			}
+		}
+		 hidden_effect = {
+			scope:wench_CRE_scope = { add_gold = 150 }
+			add_courtier = scope:wench_CRE_scope
+			stress_impact = {
+				content = medium_stress_impact_gain
+				diligent = medium_stress_impact_loss
+				lustful = medium_stress_impact_loss
+			}
+			
+			add_prestige = -80
+			
+			add_hook = {
+				type = favor_hook
+				target = scope:wench_CRE_scope
+			}
+		}
+		
+		 
+	}
+	option = { # out of my sight
+		 name = wench_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = wench_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = 80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = 80
+			add_dread = dread_exchange_reward_value
+				
+		 }
+	}
+}
+#####################################################################################################
+#####################################################################################################
+#       outfit_tags = { beggar_rags }
+#       dread_exchange_reward_value
+#	    outfit_tags = { monk_outfit }
+#       outfit_tags = { no_clothes }
+#       gender_female_chance = 50
+#       indebted_hook/favor_hook
+#       faith = faith:waldensian

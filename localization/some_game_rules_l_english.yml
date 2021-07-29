@@ -1,0 +1,26 @@
+﻿l_english:
+
+  rule_monthly_gain_manipulation_ai:0 "AI Improvement Buffs"
+  setting_default_monthly_gain_ai:0 "No AI buffs (Easy)"
+  setting_default_monthly_gain_ai_desc:0 "To compensate for the lack of AI micromanagement capacity of modifiers like: Dread, Tyrany, Stress, Health, Education, Sucession, Opinion, etc..."
+  setting_slightly_higher_monthly_gain_ai:0 "Minor AI Buffs (Defaut)"
+  setting_slightly_higher_monthly_gain_ai_desc:0 "To compensate for the lack of AI micromanagement capacity of modifiers like: Dread, Tyrany, Stress, Health, Education, Sucession, Opinion, etc..."
+  setting_higher_monthly_gain_ai:0 "Major AI Buffs (Hard)"
+  setting_higher_monthly_gain_ai_desc:0 "To compensate for the lack of AI micromanagement capacity of modifiers like: Dread, Tyrany, Stress, Health, Education, Sucession, Opinion, etc..."
+ 
+slightly_higher_monthly_gain:0 "Minor AI Buff"
+higher_monthly_gain:0 "Medium AI Buff"
+significantly_higher_monthly_gain :0 "Major AI Buff"
+
+
+  rule_monthly_gain_manipulation_player:0 "Roleplay Mode"
+  setting_default_monthly_gain_player:0 "No Changes (Easy)"
+  setting_default_monthly_gain_player_desc:0 "Debuffs in Stress and Experience, to force players into roleplay. Character traits and vocations must be respected!"
+  setting_slightly_higher_monthly_gain_player:0 "Minor Changes (Defaut)"
+  setting_slightly_higher_monthly_gain_player_desc:0 "Debuffs in Stress and Experience, to force players into roleplay. Character traits and vocations must be respected!"
+  setting_higher_monthly_gain_player:0 "Major Changes (Hard)"
+  setting_higher_monthly_gain_player_desc:0 "Debuffs in Stress and Experience, to force players into roleplay. Character traits and vocations must be respected!"
+ 
+slightly_higher_monthly_gain_player:0 "Minor Debuff"
+higher_monthly_gain_player:0 "Medium DeBuff"
+significantly_higher_monthly_gain_player :0 "Major DeBuff"

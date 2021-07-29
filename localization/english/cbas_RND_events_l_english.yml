@@ -1,0 +1,38 @@
+﻿#######################################################
+ # ALL RANDOM EVENTS DESC
+ #######################################################
+ 
+ l_english:
+ 
+
+ #1
+ witch_random_event_title:0 "Cooking recipe"
+ witch_random_event_desc:0 "Today before my meeting at the courtyard, one of my servants asked me for coin to buy some extra ingredients for my meals.\n\n"Your Highness's generosity is well known.."\n"If you be so kind.. I found this recipe here that I'm sure will please everyone in your next feast!"\n"Sure you can spare some coin to buy these ingredients.""  
+
+ witch_random_event_op_take:0 "Let me see that. Wait what is...?"
+ witch_random_event_op_take1_t:0 "This not an ordinary recipe, it's an old alchemic recipe."
+ witch_random_event_op_take2_t:0 "You take the parchment from the cook."
+ witch_random_event_op_take3_t:0 "You secretly dabble in the mysteries of the occult."
+ 
+ witch_random_event_op_exit:0 "let me see that... You fool this is no recipe!"
+ witch_random_event_op_exit_t:0 "You take the parchment and destroy it."
+ 
+ witch_random_event_op_execute:0 "You fool! This is a heretic manuscript!"
+ witch_random_event_op_execute_t:0 "You execute the cook for witchcraft and burn the parchment!"
+ 
+ #######################################################
+ # dynamic tags
+ #######################################################
+ # [ROOT.Char.GetFaith.ReligiousSymbol]
+ # [ROOT.Char.GetFaith.GetAdherentName]
+ # [ROOT.Char.GetFaith.PriestNeuter]
+ # [ROOT.Char.GetFaith.PriestNeuterPlural]
+ # [ROOT.Char.GetFaith.HouseOfWorship]
+ # [ROOT.Char.GetFaith.HouseOfWorshipPlural]
+ # [ROOT.Char.GetFaith.BishopNeuter]
+ # [ROOT.Char.GetFaith.PositiveAfterLife]
+ # [ROOT.Char.Custom('FortifiedBuilding')]
+ #  $knight_culture_player_plural_no_tooltip_lowercase$ 
+ #  $knight_culture_player_no_tooltip$
+ # [ROOT.Char.GetFaith.NegativeAfterLife]
+ # [ROOT.Char.GetFaith.HighGodName]

@@ -1,0 +1,307 @@
+﻿##################################################################
+# DYNAMIC COST AND REWARDS
+##################################################################
+
+
+
+##################################################################
+# COST
+##################################################################
+
+#------------------------------------------
+
+gold_exchange_cost = {
+	value = 250
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 100
+	}
+	
+	if = {
+		limit = {
+			root.stewardship > 15
+		}
+		add = -50
+	}
+}
+#------------------------------------------
+piety_exchange_cost = {
+	value = 350
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 100
+	}
+	
+	if = {
+		limit = {
+			root.learning > 15
+		}
+		add = -50
+	}
+}
+#------------------------------------------
+prestige_exchange_cost = {
+	value = 350
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 100
+	}
+	
+	if = {
+		limit = {
+			root.diplomacy > 15
+		}
+		add = -50
+	}
+}
+##################################################################
+# REWARDS!
+##################################################################
+
+dread_exchange_reward_value = {
+	value = 5
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			root.martial > 5
+		}
+		add = {
+			value = root.martial
+			multiply = 1
+		}
+	}
+}
+
+
+gold_exchange_reward_value = {
+	value = 125
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 50
+	}
+	if = {
+		limit = {
+			root.stewardship > 5
+		}
+		add = {
+			value = root.stewardship
+			multiply = 6
+		}
+	}
+}
+
+major_piety_exchange_reward_value = {
+	value = 175
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 75
+	}
+	if = {
+		limit = {
+			root.learning > 5
+		}
+		add = {
+			value = root.learning
+			multiply = 8
+		}
+	}
+}
+
+major_prestige_exchange_reward_value = {
+	value = 175
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdim
+		}
+		add = 75
+	}
+	if = {
+		limit = {
+			root.diplomacy > 5
+		}
+		add = {
+			value = root.diplomacy
+			multiply = 8
+		}
+	}
+}
+##################################################################
+# MINOR REWARDS FOR "donate","buy favor" ADN RANDO EVENTS
+##################################################################
+
+minor_piety_exchange_reward_value = {
+	value = 75
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 75
+	}
+	if = {
+		limit = {
+			root.learning > 5
+		}
+		add = {
+			value = root.learning
+			multiply = 8
+		}
+	}
+}
+
+minor_prestige_exchange_reward_value = {
+	value = 75
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 75
+	}
+	if = {
+		limit = {
+			root.diplomacy > 5
+		}
+		add = {
+			value = root.diplomacy
+			multiply = 8
+		}
+	}
+}
+#-----------------------------------------------random evevnts minor rewards / cost
+minor_piety_CRE_reward_value = {
+	value = 35
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 35
+	}
+	if = {
+		limit = {
+			root.learning > 5
+		}
+		add = {
+			value = root.learning
+			multiply = 8
+		}
+	}
+}
+
+minor_prestige_CRE_reward_value = {
+	value = 50
+	
+	if = {
+		limit = {
+			root.primary_title.tier = tier_county
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			root.primary_title.tier >= tier_kingdom
+		}
+		add = 50
+	}
+	if = {
+		limit = {
+			root.diplomacy > 5
+		}
+		add = {
+			value = root.diplomacy
+			multiply = 8
+		}
+	}
+}
+

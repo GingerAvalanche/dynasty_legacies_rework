@@ -1,0 +1,13 @@
+﻿# Fearful Troops
+fearful_troops_perk = {
+	lifestyle = stewardship_lifestyle
+	tree = wealth
+	position = { 2 2.5 }
+	icon = node_stewardship
+	
+	parent = war_profiteer_perk
+	
+	character_modifier = {
+		men_at_arms_maintenance = -0.20
+	}
+}

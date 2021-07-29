@@ -1,0 +1,80 @@
+﻿#######################################################
+ # Piety RANDOM EVENTS DESC
+ #######################################################
+ 
+ l_english:
+ 
+ 
+ #1
+ beggarPiety_random_event_title:0 "Beggars from [ROOT.Char.GetFaith.PositiveAfterLife]"
+ beggarPiety_random_event_desc:0 "My donations to the [ROOT.Char.GetFaith.HouseOfWorshipPlural] have been the word in the realm.\n\nToday at the courtyard, I got one most.. hum...\n Unexpected visit.\n\n"My Honourable Liege, [ROOT.Char.GetFaith.HighGodName] himself showed me the way to your Highness!"\n"He told me you would be the one to lift my insides from this malevolent hunger.. erm.."\n"And thirst of course!"\n"We must never forget ones thirst!""  
+ beggarPiety_random_event_op_welcome:0 "[ROOT.Char.GetFaith.HighGodName] told me you shall serve me instead"
+ beggarPiety_random_event_op_welcome_t:0 "The beggar will be added to your court"
+ beggarPiety_random_event_op_help:0 "But of course my son. Give this man some food and coin! And put him outside!"
+ beggarPiety_random_event_op_help_t:0 "You help the beggar"
+ beggarPiety_random_event_op_exit:0 "Get out of my sight you filthy peasant!"
+ beggarPiety_random_event_op_exit_t:0 "You dont help or recruit the beggar"
+ beggarPiety_random_event_op_execute:0 "BLASPHEMY! BURN HIM!"
+ beggarPiety_random_event_op_execute_t:0 "You execute the beggar for heresy"
+ #2
+ beggarPiety2_random_event_title:0 "Beggars from [ROOT.Char.GetFaith.PositiveAfterLife]"
+ beggarPiety2_random_event_desc:0 "My donations to the [ROOT.Char.GetFaith.HouseOfWorshipPlural] have been attracting all sorts of peasants from around the realm to my daily meeting with the locals.\n\nToday was no different.\n\n"Your Highness's generosity is well known throughout the [ROOT.Char.GetFaith.HouseOfWorshipPlural].."\n"I know I'm not in place to ask for aid.."\n"But my farm was raided by bandits.. I have nothing left Sire!""  
+ beggarPiety2_random_event_op_welcome:0 "You will work for me now!"
+ beggarPiety2_random_event_op_welcome_t:0 "The beggar will be added to your court"
+ beggarPiety2_random_event_op_help:0 "Give this one some food and coin!"
+ beggarPiety2_random_event_op_help_t:0 "You help the beggar"
+ beggarPiety2_random_event_op_exit:0 "Get out of my sight you filthy peasant!"
+ beggarPiety2_random_event_op_exit_t:0 "You don't help or recruit the beggar"
+ #3
+ monk_random_event_title:0 "[ROOT.Char.GetFaith.HighGodName]'s messenger"
+ monk_random_event_desc:0 "The donations I've been giving to the [ROOT.Char.GetFaith.HouseOfWorship] have been attracting all sorts of peasants from around the realm.\n\nToday at my daily meeting in the courtyard a disturbed [ROOT.Char.GetFaith.GetAdherentName] monk got my attention.\n\n"Oh my benevolent Liege!"\n"[ROOT.Char.GetFaith.HighGodName] told me you would be the one to free us from [ROOT.Char.GetFaith.NegativeAfterLife]!"\n"He showed me you generosity!"\n"He also told me you would be the one to save me from my misery!""  
+ monk_random_event_op_welcome:0 "Maybe [ROOT.Char.GetFaith.HighGodName] sent you to serve me." 
+ monk_random_event_op_welcome_t:0 "The monk will be added to your court"
+ monk_random_event_op_help:0 "Give this one some food and coin and get him out of here"
+ monk_random_event_op_help_t:0 "You help the monk"
+ monk_random_event_op_exit:0 "Get out of my sight you sinful monk!"
+ monk_random_event_op_exit_t:0 "You don't help or recruit the monk"
+ monk_random_event_op_execute:0 "BLASPHEMY! BURN HIM!"
+ monk_random_event_op_execute_t:0 "You execute the monk for heresy"
+ #4
+ monk2_random_event_title:0 "[ROOT.Char.GetFaith.HighGodName]'s servant"
+ monk2_random_event_desc:0 "The donations I've been giving to the [ROOT.Char.GetFaith.HouseOfWorship] have been attracting all sorts of peasants from around the realm.\n\nToday at my daily meeting in the courtyard a disturbed [ROOT.Char.GetFaith.GetAdherentName] monk got my attention.\n\n"Your Highness's generosity is well known throughout the [ROOT.Char.GetFaith.HouseOfWorshipPlural].."\n"I know I'm not in place to ask for aid.."\n"But there are children in the streets suffering form hunger.."\n"My Liege would be forever in my prayers if you sent them some help.""  
+ monk2_random_event_op_welcome:0 "I will help in exchange for your service brother." 
+ monk2_random_event_op_welcome_t:0 "The monk will be added to your court"
+ monk2_random_event_op_help:0 "I will gladly help a fellow [ROOT.Char.GetFaith.GetAdherentName]"
+ monk2_random_event_op_help_t:0 "You help the monk"
+ monk2_random_event_op_exit:0 "Get out of my sight!"
+ monk2_random_event_op_exit_t:0 "You don't help or recruit the monk"
+ #5
+ monkknigth_random_event_title:0 "Flames of devotion"
+ monkknigth_random_event_desc:0 "The donations I've been giving to the [ROOT.Char.GetFaith.HouseOfWorship] have been attracting all sorts of peasants from around the realm.\n\nToday a zealous [ROOT.Char.GetFaith.GetAdherentName] monk got my attention.\n\n"Your Highness I'm here to offer you my service."\n"Let me be the instrument of justice against those who profanate [ROOT.Char.GetFaith.HighGodName] word!""  
+ monkknigth_random_event_op_welcome:0 "God wills it brother." 
+ monkknigth_random_event_op_welcome_t:0 "The monk will be added to your court"
+ monkknigth_random_event_op_exit:0 "Get out of my sight!"
+ monkknigth_random_event_op_exit_t:0 "You don't help or recruit the monk"
+ #6
+ wench_random_event_title:0 "Carnal incantation"
+ wench_random_event_desc:0 "My donations to my subjects have been attracting all sorts of peasants from around the realm.\n\nBut today at the courtyard, I got one most unexpected visit.\n\n"My Honourable Sire I have no one else to ask for help."\n"Your Highness's generosity is well known."\n"Please spare a few coins to this humble servant.""
+ wench_random_event_op_welcome:0 "I will put you to good use." 
+ wench_random_event_op_welcome_t:0 "The wench will be added to your court"
+ wench_random_event_op_help:0 "I will gladly help a fellow [ROOT.Char.GetFaith.GetAdherentName]"
+ wench_random_event_op_help_t:0 "You help the wench"
+ wench_random_event_op_exit:0 "Get out of my sight!"
+ wench_random_event_op_exit_t:0 "You don't help or recruit the wench"
+ 
+ #######################################################
+ # dynamic tags
+ #######################################################
+ # [ROOT.Char.GetFaith.ReligiousSymbol]
+ # [ROOT.Char.GetFaith.GetAdherentName]
+ # [ROOT.Char.GetFaith.PriestNeuter]
+ # [ROOT.Char.GetFaith.PriestNeuterPlural]
+ # [ROOT.Char.GetFaith.HouseOfWorship]
+ # [ROOT.Char.GetFaith.HouseOfWorshipPlural]
+ # [ROOT.Char.GetFaith.BishopNeuter]
+ # [ROOT.Char.GetFaith.PositiveAfterLife]
+ # [ROOT.Char.Custom('FortifiedBuilding')]
+ #  $knight_culture_player_plural_no_tooltip_lowercase$ 
+ #  $knight_culture_player_no_tooltip$
+ # [ROOT.Char.GetFaith.NegativeAfterLife]
+ # [ROOT.Char.GetFaith.HighGodName]

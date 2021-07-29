@@ -1,0 +1,71 @@
+﻿namespace = clan_vassal
+
+
+clan_vassal.0001 = {
+	type = letter_event
+	opening = clan_vassal.0001.opening
+	desc = clan_vassal.0001.desc
+	sender = {
+		character = scope:actor
+		animation = personality_rational
+	}
+
+	option = {
+		name = clan_vassal.0001.a
+			ai_chance = {	
+			base = 1
+			modifier = {
+			is_close_or_extended_family_of = scope:actor 
+			add = 50
+			}
+			modifier = {
+			is_councillor_of = scope:actor 
+			add = 25
+			}
+			modifier = {
+			opinion = {
+			target = scope:actor
+			value >= 65
+			}	
+			add = 10
+			}			
+		}
+		show_as_tooltip = {
+			change_government = clan_government
+		}
+		hidden_effect = { 
+		add_realm_law_skip_effects = crown_authority_0
+		change_government = clan_government
+		}
+			reverse_add_opinion = {
+			modifier = respect_opinion 
+			target = scope:actor
+			opinion = low_positive_opinion
+		}		
+	}
+	option = {
+		name = clan_vassal.0001.b
+		ai_chance = {	
+			base = 2
+		modifier = {
+			opinion = {
+			target = scope:actor
+			value <= 50
+			}	
+			add = 48
+			}
+		modifier = {
+			opinion = {
+			target = scope:actor
+			value <= 0
+			}	
+			add = 100
+			}			
+		}
+		reverse_add_opinion = {
+			modifier = refusal_opinion
+			target = scope:actor
+			opinion = low_negative_opinion
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_english:
+
+ convert_to_clan_decision:0 "Adopt Clan Government"
+ convert_to_clan_decision_desc:0 "As my realm grows, so does the challenge to control it. If [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] is to keep expanding, we must leave the old ways behind and convert to the ways of the family."
+ convert_to_clan_decision_confirm:0 "Adopt Clan Ways"
+ convert_to_clan_decision_tooltip:0 "Change [government|E] type by becoming a clan"
+ clan_vassal.0001.t:0 "A New Era"
+ clan_vassal.0001.desc:0 "The old ways have served us well, and we will always honor them. However, as the [ROOT.Char.GetTitleAsNameNoTooltip] of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip], I have concluded that we must adopt the clan ways and its principles if we shall continue to prosper. It is the crucial next step on our road to greatness!"
+ clan_vassal.0001.a:0 "Long live [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]!"
+ clan_vassal.0001.b:0 "I do not like [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]!"
+ clan_vassal.0001.opening:0 "[actor.Custom2('AppropriateGreeting', ROOT.Char)]"

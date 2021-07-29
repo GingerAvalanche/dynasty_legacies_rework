@@ -1,0 +1,67 @@
+﻿ #######################################################
+ # MAJOR DECISIONS DESC
+ #######################################################
+ 
+ 
+l_english:
+ wealth_prestige_title:0 "Buy favor from local court"
+ wealth_prestige_tooltip:0 "We can help local merchants and craftsmen for favors."
+ wealth_prestige_decision_desc:0 "We can help local merchants and craftsmen in the realm by granting them gold, In turn this will give you some favor and prestige among the dregs."
+ wealth_prestige_decision_confirm:0 "Buy favor"
+ 
+ prestige_wealth_title:0 "Send your soldiers to extort compensations"
+ prestige_wealth_tooltip:0 "You can send your most loyal $knight_culture_player_plural_no_tooltip_lowercase$  in secret to extort compensations from your realm peasants."
+ prestige_wealth_decision_desc:0 "There's a time taxation is not enough, you can send your most loyal $knight_culture_player_plural_no_tooltip_lowercase$  in secret to extort compensations from your Realm's subjects, beware, your honour is at stake."
+ prestige_wealth_decision_confirm:0 "Get me my gold!"
+ 
+ prestige_piety_title:0 "Attend mass"
+ prestige_piety_tooltip:0 "You can get some favor from the local clergy if you attend mass at the nearby [ROOT.Char.GetFaith.HouseOfWorship]."
+ prestige_piety_decision_desc:0 "Sometimes we need to repent for our sins, attending a local mass alongside the little man may get you some favor from the clergy, but you will be frowned upon by the noble court, we do not mix with the local peasantry scum."
+ prestige_piety_decision_confirm:0 "Attend mass"
+ 
+ piety_prestige_title:0 "Get rid of obnoxious preachers"
+ piety_prestige_tooltip:0 "You can send your loyal $knight_culture_player_plural_no_tooltip_lowercase$  to get rid of obnoxious preachers and get favor from your people."
+ piety_prestige_decision_desc:0 "Sometimes some scheming monk weasel may start preaching against our rule, these rats need to know their place, send your must loyal $knight_culture_player_plural_no_tooltip_lowercase$  to shake down some sinful clerks and restore some order."
+ piety_prestige_decision_confirm:0 "Get rid of obnoxious preachers"
+ 
+ wealth_piety_title:0 "Donate to a small [ROOT.Char.GetFaith.HouseOfWorship]"
+ wealth_piety_tooltip:0 "You can donate some gold to a local small [ROOT.Char.GetFaith.HouseOfWorship] in turn of some favor from the clergy"
+ wealth_piety_decision_desc:0 "Sometimes donating a little gold to a local [ROOT.Char.GetFaith.HouseOfWorship] can appease some more busy monks and even relieve pressure on the people."
+ wealth_piety_decision_confirm:0 "Donate to a small [ROOT.Char.GetFaith.HouseOfWorship]"
+ 
+ piety_wealth_title:0 "Collect from the People"
+ piety_wealth_tooltip:0 "Require [ROOT.Char.GetFaith.PriestNeuterPlural] to collect from the people in the name of [ROOT.Char.GetFaith.HighGodName] and King!"
+ piety_wealth_decision_desc:0 "In times of need the clergy may collect tribute from the local peasantry during mass, however greedy zealous clerks may not see this has a pious behaviour."
+ piety_wealth_decision_confirm:0 "Get me my blessed gold!"
+ 
+ all_renown_title:0 "Strengthen my family's notoriety"
+ all_renown_tooltip:0 "Get renown by commissioning art from local artisans"
+ all_renown_decision_desc:0 "Commission art from painters, sculptors and other artists from the realm to strengthen my family's notoriety. A good family portrait will make sure your existence won't fade away. Unfortunately there are always some who do not enjoy in your splendor."
+ all_renown_decision_confirm:0 "Don't make me look fat!"
+ 
+ wealth_prestige_decision_effects:0 "Coin creates Wealth.\n(Some extra gold is advised)"
+ 
+ prestige_wealth_event_effects:0 "I will gather a moderate sum of [gold|E], keep order on the streets and maybe gather some knowledge about the locals."
+ prestige_piety_event_effects:0 "I will gain [piety|E] from the clergy.\nGet to know the local rabble, and maybe settle some issues along the way."
+ piety_prestige_event_effects:0 "I will get some order on the streets.\nGain [prestige|E] among the local nobles.\nAnd perhaps learn something from those rowdy preachers."
+ 
+ wealth_piety_decision_effects:0 "This round is on me!\n(Some extra gold is advised)"
+ 
+ piety_wealth_event_effects:0 "By the name of [ROOT.Char.GetFaith.HighGodName] and King, all [ROOT.Char.GetFaith.PriestNeuterPlural] will collect [gold|E] from locals.\nAnd hopefully gain experience to deal with future endeavours."
+ all_renown_event_effects:0 "One lives in the hope of becoming a memory."
+ 
+ #######################################################
+ # dynamic tags
+ #######################################################
+ # [ROOT.Char.GetFaith.ReligiousSymbol]
+ # [ROOT.Char.GetFaith.GetAdherentName]
+ # [ROOT.Char.GetFaith.PriestNeuter]
+ # [ROOT.Char.GetFaith.PriestNeuterPlural]
+ # [ROOT.Char.GetFaith.HouseOfWorship]
+ # [ROOT.Char.GetFaith.BishopNeuter]
+ # [ROOT.Char.GetFaith.PositiveAfterLife]
+ # [ROOT.Char.Custom('FortifiedBuilding')]
+ #  $knight_culture_player_plural_no_tooltip_lowercase$ 
+ #  $knight_culture_player_no_tooltip$
+ # [ROOT.Char.GetFaith.NegativeAfterLife]
+ # [ROOT.Char.GetFaith.HighGodName]

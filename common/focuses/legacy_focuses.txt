@@ -1,0 +1,66 @@
+﻿legacy_bloodline_focus = {
+	lifestyle = legacy_lifestyle
+	
+	desc = {
+		desc = legacy_bloodline_focus_desc
+		desc = line_break
+	}	
+	modifier = {
+	positive_inactive_inheritance_chance = 0.10
+	negative_inactive_inheritance_chance = -0.10
+	}
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+	
+	focus_id = 15
+}
+
+legacy_culture_focus = {
+	lifestyle = legacy_lifestyle
+
+	desc = {
+		desc = legacy_culture_focus_desc
+		desc = line_break
+	}
+	
+	modifier = {
+		cultural_head_fascination_mult = 0.15
+		different_culture_opinion = -15
+	}
+
+
+
+	auto_selection_weight = {
+		value = 11
+
+
+	}
+	
+	focus_id = 16
+}
+
+legacy_dynasty_focus = {
+	lifestyle = legacy_lifestyle
+
+	desc = {
+		desc = legacy_dynasty_focus_desc
+		desc = line_break
+	}
+
+	modifier = {
+#		monthly_dynasty_prestige = 0.5
+#		dynasty_opinion = 10
+		monthly_dynasty_prestige_mult = 0.20
+	}
+
+	auto_selection_weight = {
+		value = 11
+
+
+	}
+	
+	focus_id = 17
+}

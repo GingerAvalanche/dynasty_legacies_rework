@@ -1,0 +1,56 @@
+﻿vta_faction_power_threshold = {
+	value = faction_power_threshold
+}
+
+vta_claimant_faction_threshold = {
+	value = 0
+	if = {
+		limit = {
+			exists = faction_leader
+			exists = faction_leader.var:claiming_title
+			faction_leader.var:claiming_title = {save_temporary_scope_as = claiming_title}
+			this = { save_temporary_scope_as = faction }
+		}
+		faction_target = {
+			every_vassal_or_below = {
+				limit = {
+					save_temporary_scope_as = vassal
+					scope:faction = {
+						any_faction_member = {
+							NOT = { THIS = scope:vassal }
+						}
+					}
+					primary_title.tier >= tier_county
+					NOT = {
+						any_sub_realm_county = {
+							count = all
+							target_is_de_jure_liege_or_above = scope:claiming_title
+						}
+					}
+					any_sub_realm_county = {
+						target_is_de_jure_liege_or_above = scope:claiming_title
+					}
+				}
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = county_levies_to_raise
+				}
+			}
+		}
+		divide = vta_faction_strength
+		multiply = 100
+		subtract = 80
+		min = 0
+	}
+}
+
+vta_faction_strength = {
+	value = 0
+	every_faction_member = {
+		every_held_title = {
+			limit = { tier = tier_county }
+			add = county_levies_to_raise
+		}
+	}
+	min = 1
+}

@@ -1,0 +1,54 @@
+convert_to_clan_decision = { 
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	desc = convert_to_clan_decision_desc
+	
+	ai_check_interval = 36
+	
+	is_shown = {
+		has_government = tribal_government
+		liege = { NOT = { has_government = clan_government } }
+	}
+	
+	is_valid = {
+		has_realm_law = tribal_authority_3
+		custom_description = {
+			text = faith_is_reformed
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = unreformed } }
+		}
+		prestige_level >= 4
+	}
+	
+	cost = {
+		prestige = 150
+	}
+	
+	effect = {
+		change_government = clan_government
+		#trigger_event = major_decisions.0001
+		add_realm_law_skip_effects = crown_authority_0
+		save_scope_as = actor
+		hidden_effect = {
+			every_vassal = {
+				trigger_event = {
+					id = clan_vassal.0001
+					days = 3
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		is_ruler = yes
+	}
+	
+	ai_will_do = {
+		base = 0
+		modifier = { #Go for the more lenient decision if this is the case
+			add = -100
+			liege = { has_government = clan_government }
+		}
+	}
+}
+

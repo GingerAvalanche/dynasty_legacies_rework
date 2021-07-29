@@ -1,0 +1,42 @@
+﻿maimed_in_battle_effect = {
+	random_list = {
+		2 = {
+			trigger = {
+				NOT = {
+					has_trait = one_legged
+				}
+			}
+			add_trait_force_tooltip = one_legged
+			increase_wounds_effect = { REASON = fight }
+		}
+		1 = {
+			trigger = {
+				NOT = {
+					has_trait = disfigured
+				}
+			}
+			add_trait_force_tooltip = disfigured
+			increase_wounds_effect = { REASON = fight }
+			epilepsy_brain_trauma_risk_effect = { CHANCE = 5 }
+		}
+		3 = {
+			trigger = {
+				NOT = {
+					has_trait = one_eyed
+				}
+			}
+			add_trait_force_tooltip = one_eyed
+			increase_wounds_effect = { REASON = fight }
+			epilepsy_brain_trauma_risk_effect = { CHANCE = 5 }
+		}
+		5 = {
+			trigger = {
+				NOT = {
+					has_trait = maimed
+				}
+			}
+			add_trait_force_tooltip = maimed
+			epilepsy_brain_trauma_risk_effect = { CHANCE = 5 }
+		}
+	}
+}

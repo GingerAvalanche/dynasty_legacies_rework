@@ -1,0 +1,62 @@
+﻿
+baron_modifier = {
+	domain_limit = 1
+	# Barons don't get to have knights
+}
+
+count_modifier = {
+	domain_limit = 1
+	knight_limit = 3
+
+	men_at_arms_cap = -2
+}
+
+duke_modifier = {
+	domain_limit = 1
+	knight_limit = 6
+	vassal_limit = 5
+	
+	diplomatic_range_mult = 0.25
+	dread_baseline_add = 5
+	general_opinion = 5
+	health = 0.10
+	prowess = 2
+	ai_boldness = 5
+
+	mercenary_hire_cost_mult = 0.1
+
+}
+
+king_modifier = {
+	domain_limit = 1
+	knight_limit = 9
+	vassal_limit = 10
+
+	diplomatic_range_mult = 0.5
+	men_at_arms_cap = 2
+	general_opinion = 10
+	monthly_prestige_gain_mult = 0.10
+	dread_baseline_add = 15
+	health = 0.20
+	prowess = 4
+	ai_boldness = 15
+
+	mercenary_hire_cost_mult = 0.2
+}
+
+emperor_modifier = {
+	domain_limit = 1
+	knight_limit = 12
+	vassal_limit = 15
+
+	diplomatic_range_mult = 1
+	men_at_arms_cap = 4
+	general_opinion = 15
+	monthly_prestige_gain_mult = 0.20
+	dread_baseline_add = 30
+	health = 0.30
+	prowess = 6
+	ai_boldness = 25
+
+	mercenary_hire_cost_mult = 0.3
+}

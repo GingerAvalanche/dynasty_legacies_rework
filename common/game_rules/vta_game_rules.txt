@@ -1,0 +1,17 @@
+﻿vta_mode_game_rules = {
+	default = vta_rule_both
+
+	vta_rule_defender = { }
+	
+	vta_rule_both = { }
+
+	vta_rule_attacker = { }
+}
+
+vta_affected_game_rules = {
+	default = vta_rule_land_subject
+
+	vta_rule_land_subject = { }
+	
+	vta_rule_land = { }
+}

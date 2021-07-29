@@ -1,0 +1,26 @@
+﻿l_english:
+    usury_event_t:0 "Meeting with the Moneylenders"
+    
+    usury_event_desc1:0 "The market is full and alive.\nA lost child wailed for his mother, a man frantically searched for his missing dog, shopkeepers screamed out offers on the top of their voices to attract customers and customers desperately tried to bargain for the best possible prices.\n\nMy meeting with the shady merchants is set.\n\n"You're here for a loan my Liege?""
+    usury_event_desc2:0 "The air was perfumed with produce, filled with the sounds of busy merchants and loud Bard's songs, the ground was gritty stone and the air a perfect pre-winter chill.\n\nMy meeting with the shady merchants is set.\n\n"You're here for a loan my Liege?""
+    usury_event_desc3:0 "The morning sun shone down upon the market.\nThe salty odour of sweat mingled with the nose tingling aroma of spices and the sweet smell of recent baked bread coming from the stalls.\n\nOne shady merchant approaches.\n\n"You're here for a loan my Liege?"\n"we are ready to negotiate the deal..""
+    usury_event_desc4:0 "I am in the market square moving between the stall holders, each pushing harder than the one before to unload their wares.\nSure, many of the best things are long gone, but my business is elsewhere.\n\nAs I enter the Jewish quarter and a wealthy man approaches.\n\n"My Liege what took you so long?""
+    usury_event_desc5:0 "The market stalls lined the route, I paused for a moment to survey the scene, some peasants casually browsing, whilst others hustle and bustle, and haggled over the price of the fruits and other merchandise, with vendors of various towns from the realm.\n\nI am now at the meeting location.\n\n"My Liege, what can we do for you?""
+    usury_event_desc6:0 "The footpaths were crowded with stalls selling sacks of nuts and dried fruit, or meat roasting on roasting skewers. Powdered spices lay in rust red and dusty yellow piles, or spilled bright green from sacks as large as feed bags.\n\nAs I enter the Jewish quarter and man approaches.\n\n"You're here for a loan my Liege?""
+    usury_event_desc7:0 "Smells of freshly slaughtered meat hanging from hooks, rancid smell of body odor, smell of manure and chicken droppings, stalls overflowing with produce, vegetables spilled onto the muddy ground, splashing through puddles, stall holders hollering out their special deals, peasants haggling over prices, people gossiping in huddles, the market was full today.\nBut my business is elsewhere.\nThe meeting with the shady merchants is set.\n\n"You're here for a loan my Liege?""
+    
+    
+    
+    usury_event_SL:0 "Take on a small loan"
+    usury_event_SL_interest:0 "300 gold must be payed back"
+    
+	usury_event_ML:0 "Take on a medium loan"
+    usury_event_ML_interest:0 "600 gold must be payed back" 
+    
+	usury_event_MM:0 "Take on a moderate loan"
+    usury_event_MM_interest:0 "900 gold must be payed back" 
+    
+    usury_event_KL:0 "Take on a king's loan"
+    usury_event_KL_interest:0 "2500 gold must be payed back" 
+    
+    usury_event_exit:0 "Nevermind, I have changed my mind"

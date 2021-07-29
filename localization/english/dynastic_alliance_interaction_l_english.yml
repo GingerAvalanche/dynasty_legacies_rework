@@ -1,0 +1,7 @@
+﻿l_english:
+ dynastic_alliance_interaction:0 "Propose Alliance"
+ dynastic_alliance_interaction_desc:0 "Use diplomacy to strengthen your dynastic bonds into an alliance!"
+ DYNASTIC_ALLIANCE_INTERACTION_NOTIFICATION:0 "Our dynastic bonds have become an alliance!"
+ dynastic_little_guys:0 "You're both count rank.$VALUE|=+0$"
+ dynastic_king:0 "One of you are king rank!$VALUE|=+0$"
+ dynastic_emperor:0 "One of you are emperor rank.$VALUE|=+0$"

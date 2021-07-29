@@ -1,0 +1,79 @@
+﻿vta_vassalize_religious_war = {
+	trigger_if = {
+		limit = {
+			exists = $WAR$
+			exists = $ATTACKER$
+			exists = $DEFENDER$
+			exists = $CHARACTER$
+			exists = $TITLE$
+		}
+		AND = {
+			$WAR$ = {
+				OR = {
+					using_cb = minor_religious_war
+					using_cb = religious_war
+					using_cb = major_religious_war
+					#using_cb = excommunication_war
+					#using_cb = undirected_great_holy_war
+				}
+			}
+			$ATTACKER$.faith = {
+				OR = {
+					faith_hostility_level_comparison = {
+						$CHARACTER$.faith < $DEFENDER$.faith
+					}
+					has_doctrine_parameter = pluralism_pluralistic_holy_wars_preserve_vassals
+				}
+			}
+			$CHARACTER$.primary_title.tier < $ATTACKER$.primary_title.tier
+		}
+	}
+}
+
+vta_vassalize_war = {
+	trigger_if = {
+		limit = {
+			exists = $WAR$
+			exists = $ATTACKER$
+			exists = $DEFENDER$
+			exists = $CHARACTER$
+			exists = $TITLE$
+		}
+		AND = {
+			$TITLE$ = { NOT = { holder = $CHARACTER$ } }
+			$WAR$ = {
+				OR = {
+					using_cb = de_jure_cb
+					using_cb = individual_county_de_jure_cb
+					using_cb = individual_duchy_de_jure_cb
+					using_cb = norman_conquest_cb
+
+					AND = {
+						using_cb = invasion_war
+						$CHARACTER$.primary_title.tier < $ATTACKER$.primary_title.tier
+					}
+
+					AND = {
+						OR = {
+							using_cb = claim_cb
+							using_cb = duchy_conquest_cb
+							using_cb = ducal_conquest_cb
+							using_cb = claimant_faction_war
+						}
+						$TITLE$ = { NOT = { holder = $CHARACTER$ } }
+					}
+				}
+			}
+			OR = {
+				#$CHARACTER$.primary_title.tier < $ATTACKER$.primary_title.tier
+				$WAR$ = {
+					using_cb = norman_conquest_cb
+				}
+				any_sub_realm_county = {
+					count = all
+					target_is_de_jure_liege_or_above = $TITLE$
+				}
+			}
+		}
+	}
+}

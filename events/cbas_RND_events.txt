@@ -1,0 +1,224 @@
+﻿#########################################################################################
+#RANDOM EVENTS _ nofocus
+#########################################################################################
+
+
+namespace = cbas_RND_event
+
+######################################################################
+#WITCH secret cook
+#######################################################################
+
+
+cbas_RND_event.1 = { 
+	
+	type = character_event
+	title = witch_random_event_title
+	desc = witch_random_event_desc
+	
+	trigger = {
+			is_witch_trigger = no
+				NOT = {
+				has_character_flag = cbas_RND_witch_flag
+				}
+	}
+	
+	 override_background = {
+			 event_background = corridor_day
+	}
+	
+	theme = learning 
+	
+	 right_portrait = {
+		 character = root
+		 animation = personality_rational
+	 }
+	
+	 left_portrait = {
+		  character = scope:witch_CRE_scope
+		  animation = beg
+		
+	 }
+
+	 immediate = {
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 6
+		}
+		hidden_effect = {
+			
+			create_character = {#----------------------generate cook
+				location = root.capital_province
+				age = { 40 55 }
+				gender = female
+				faith = root.faith
+				culture = root.culture
+				dynasty = none
+				save_scope_as = witch_CRE_scope
+
+				random_traits_list = {
+					count = 1
+					education_learning_2 = {}
+					education_learning_1 = {}
+									}
+				random_traits_list = {
+					count = 3
+					calm = {}
+					diligent = {}
+					arbitrary = {}
+					zealous = {}
+					content = {}
+					paranoid = {}
+					trusting = {}
+				}
+				random_traits = no
+			}
+				
+		}
+	}
+#------------------------------------end gen
+
+	option = { # help
+		 name = witch_random_event_op_take
+		 
+		 show_as_tooltip = {
+			custom_tooltip = witch_random_event_op_take1_t
+			custom_tooltip = witch_random_event_op_take2_t
+			stress_impact = {
+				
+				cynical = minor_stress_impact_loss
+				content = minor_stress_impact_gain
+				zealous = major_stress_impact_gain
+				
+			}
+			add_learning_lifestyle_xp = 50
+			custom_tooltip = witch_random_event_op_take3_t
+			add_secret = { type = secret_witch }
+			add_character_modifier = {
+			modifier = focused_reading_modifier
+			years = 5
+			}
+			
+		 }
+		 hidden_effect = {
+		
+			stress_impact = {
+				cynical = minor_stress_impact_loss
+				content = minor_stress_impact_gain
+				zealous = major_stress_impact_gain
+			}
+			add_learning_lifestyle_xp = 50
+			add_secret = { type = secret_witch }
+			add_character_modifier = {
+			modifier = focused_reading_modifier
+			years = 5
+			}
+			
+			random_list = { #-------------------------trigger other events
+				1 = { trigger_event = { 
+						id = cbas_RND_piety_event.1
+						days = { 5 6 }
+						}
+					}	
+				1 = { trigger_event = {
+						id = cbas_RND_prestige_event.1
+						days = { 5 6 }
+						}
+					}
+				1 = { } #nothing happens
+			}
+			
+		 }
+	}
+
+	option = { # out of my sight
+		 name = witch_random_event_op_exit
+		 show_as_tooltip = {
+			custom_tooltip = witch_random_event_op_exit_t	
+			stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			}
+			add_prestige = 80
+			add_piety = 80
+			add_learning_lifestyle_xp = 50
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				content = medium_stress_impact_loss
+				greedy = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				stubborn = medium_stress_impact_loss
+				arrogant = medium_stress_impact_loss
+			 }
+			add_prestige = 80
+			add_piety = 80
+			add_learning_lifestyle_xp = 50
+			add_character_flag = {
+				flag  =  cbas_RND_witch_flag
+				}
+				
+		 }
+	}
+	option = { # EXECUTE
+		 name = witch_random_event_op_execute
+		 show_as_tooltip = {
+			custom_tooltip = witch_random_event_op_execute_t	
+			
+			stress_impact = {
+				zealous = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+				
+			}
+			scope:witch_CRE_scope = {
+			death = {
+				death_reason = death_burned
+				killer = root
+				}
+			}
+			add_prestige = 80
+			add_piety = 80
+			add_dread = dread_exchange_reward_value
+		 }
+		 hidden_effect = {
+			 stress_impact = {
+				zealous = medium_stress_impact_loss
+				cynical = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+				wrathful = medium_stress_impact_loss
+			 }
+			scope:witch_CRE_scope = {
+			death = {
+				death_reason = death_execution
+				killer = root
+				}
+			}
+			add_prestige = 80
+			add_piety = 80
+			add_dread = dread_exchange_reward_value
+			add_character_flag = {
+				flag  =  cbas_RND_witch_flag
+				}	
+		 }
+	}
+	
+}
+	
+#####################################################################################################
+#####################################################################################################
+#       outfit_tags = { beggar_rags }
+#       dread_exchange_reward_value
+#	    outfit_tags = { monk_outfit }
+#       outfit_tags = { no_clothes }
+#       gender_female_chance = 50
+#       indebted_hook/favor_hook
+#       faith = faith:waldensian

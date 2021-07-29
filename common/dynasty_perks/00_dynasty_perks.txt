@@ -1,0 +1,1099 @@
+﻿# BLOOD LEGACIES
+
+blood_legacy_1 = { # Teste
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		name = blood_legacy_1_modifier
+		close_relative_opinion = 10
+		independent_ruler_opinion = -5
+		fellow_vassal_opinion = -5
+		liege_opinion = -5
+		life_expectancy = 2	
+		years_of_fertility = 2
+		monthly_prestige_gain_mult = 0.05
+		fertility = 0.03
+		diplomatic_range_mult = -0.15
+		positive_random_genetic_chance = 5
+		negative_random_genetic_chance = -5
+		positive_inactive_inheritance_chance = 0.05
+		negative_inactive_inheritance_chance = -0.05
+		genetic_trait_strengthen_chance = 0.05
+		long_reign_bonus_mult = 0.20
+		health = 0.10
+		inbreeding_chance = -0.10
+		domain_limit = -1
+
+	ai_sociability = -10
+	ai_energy = -10
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+blood_legacy_2 = { # Convergent Blood
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		name = blood_legacy_1_modifier
+		close_relative_opinion = 10
+		independent_ruler_opinion = -5
+		fellow_vassal_opinion = -5
+		liege_opinion = -5
+		life_expectancy = 2	
+		years_of_fertility = 2
+		monthly_prestige_gain_mult = 0.05
+		fertility = 0.03
+		diplomatic_range_mult = -0.15
+		positive_random_genetic_chance = 5
+		negative_random_genetic_chance = -5
+		positive_inactive_inheritance_chance = 0.05
+		negative_inactive_inheritance_chance = -0.05
+		genetic_trait_strengthen_chance = 0.05
+		long_reign_bonus_mult = 0.20
+		health = 0.10
+		inbreeding_chance = -0.10
+		domain_limit = -1
+
+	ai_sociability = -10
+	ai_energy = -10
+	}
+}
+
+blood_legacy_3 = { # Resilient Bloodline
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		name = blood_legacy_1_modifier
+		close_relative_opinion = 10
+		independent_ruler_opinion = -5
+		fellow_vassal_opinion = -5
+		liege_opinion = -5
+		life_expectancy = 2	
+		years_of_fertility = 2
+		monthly_prestige_gain_mult = 0.05
+		fertility = 0.03
+		diplomatic_range_mult = -0.15
+		positive_random_genetic_chance = 5
+		negative_random_genetic_chance = -5
+		positive_inactive_inheritance_chance = 0.05
+		negative_inactive_inheritance_chance = -0.05
+		genetic_trait_strengthen_chance = 0.05
+		long_reign_bonus_mult = 0.20
+		health = 0.10
+		inbreeding_chance = -0.10
+		domain_limit = -1
+
+	ai_sociability = -10
+	ai_energy = -10
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = kin_legacy_3_legacy_effect
+		}
+	}
+}
+
+
+blood_legacy_4 = { # Architected Ancestry
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		name = blood_legacy_1_modifier
+		close_relative_opinion = 10
+		independent_ruler_opinion = -5
+		fellow_vassal_opinion = -5
+		liege_opinion = -5
+		life_expectancy = 2	
+		years_of_fertility = 2
+		monthly_prestige_gain_mult = 0.05
+		fertility = 0.03
+		diplomatic_range_mult = -0.15
+		positive_random_genetic_chance = 5
+		negative_random_genetic_chance = -5
+		positive_inactive_inheritance_chance = 0.05
+		negative_inactive_inheritance_chance = -0.05
+		genetic_trait_strengthen_chance = 0.05
+		long_reign_bonus_mult = 0.20
+		health = 0.10
+		inbreeding_chance = -0.10
+		domain_limit = -1
+
+	ai_sociability = -10
+	ai_energy = -10
+	}
+
+}
+
+blood_legacy_5 = { # Octogenarians
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		name = blood_legacy_1_modifier
+		close_relative_opinion = 10
+		independent_ruler_opinion = -5
+		fellow_vassal_opinion = -5
+		liege_opinion = -5
+		life_expectancy = 2	
+		years_of_fertility = 2
+		monthly_prestige_gain_mult = 0.05
+		fertility = 0.03
+		diplomatic_range_mult = -0.15
+		positive_random_genetic_chance = 5
+		negative_random_genetic_chance = -5
+		positive_inactive_inheritance_chance = 0.05
+		negative_inactive_inheritance_chance = -0.05
+		genetic_trait_strengthen_chance = 0.05
+		long_reign_bonus_mult = 0.20
+		health = 0.10
+		inbreeding_chance = -0.10
+		domain_limit = -1
+
+	ai_sociability = -10
+	ai_energy = -10
+	}
+
+effect = {
+		# Effect is applied in the on action 'on_birth_child'
+		custom_description_no_bullet = {
+			text = blood_legacy_4_effect
+		}
+	}
+
+	traits = {
+		beauty_good_3 = 100
+		intellect_good_3 = 100
+		physique_good_3 = 100
+		fecund = 100
+		albino = 100
+		giant = 100
+		dwarf = 100
+		scaly = 100
+	}
+}
+
+# WARFARE LEGACIES
+
+warfare_legacy_1 = { # House of Warriors
+	legacy = warfare_legacy_track
+
+	character_modifier = {
+		name = warfare_legacy_1_name
+		
+		dynasty_opinion = 5
+		martial = 1
+		attacker_advantage = 1
+		men_at_arms_maintenance = -0.05
+		siege_weapon_siege_value_mult = 0.10
+		pikemen_damage_mult = 0.10
+		archers_damage_mult = 0.10
+		heavy_infantry_damage_mult = 0.10
+		light_cavalry_damage_mult = 0.10
+		heavy_cavalry_damage_mult = 0.10
+		skirmishers_damage_mult = 0.10
+		vassal_tax_contribution_mult = 0.10
+		vassal_levy_contribution_mult = -0.10
+		monthly_war_income_mult = 0.05
+		cultural_head_fascination_mult = 0.10
+		levy_size = -0.10
+		monthly_tyranny = 0.10
+		stress_gain_mult = 0.10
+
+	ai_Boldness = 5
+	ai_rationality = 10
+	ai_war_chance = 0.04
+		
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				has_government = feudal_government
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+warfare_legacy_2 = { # Generational Belligerence
+	legacy = warfare_legacy_track
+
+	character_modifier = {
+		dynasty_opinion = 5
+		martial = 1
+		attacker_advantage = 1
+		men_at_arms_maintenance = -0.05
+		siege_weapon_siege_value_mult = 0.10
+		pikemen_damage_mult = 0.10
+		archers_damage_mult = 0.10
+		heavy_infantry_damage_mult = 0.10
+		light_cavalry_damage_mult = 0.10
+		heavy_cavalry_damage_mult = 0.10
+		skirmishers_damage_mult = 0.10
+		vassal_tax_contribution_mult = 0.10
+		vassal_levy_contribution_mult = -0.10
+		monthly_war_income_mult = 0.05
+		cultural_head_fascination_mult = 0.10
+		levy_size = -0.10
+		monthly_tyranny = 0.10
+		stress_gain_mult = 0.10
+
+	ai_Boldness = 5
+	ai_rationality = 10
+	ai_war_chance = 0.04
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = warfare_legacy_2_effect
+		}
+	}
+}
+
+warfare_legacy_3 = { # Squire Traditions
+	legacy = warfare_legacy_track
+
+	effect = {
+		custom_description_no_bullet = {
+			text = warfare_legacy_3_effect
+		}
+	}
+
+	character_modifier = {
+		dynasty_opinion = 5
+		martial = 1
+		attacker_advantage = 1
+		men_at_arms_maintenance = -0.05
+		siege_weapon_siege_value_mult = 0.10
+		pikemen_damage_mult = 0.10
+		archers_damage_mult = 0.10
+		heavy_infantry_damage_mult = 0.10
+		light_cavalry_damage_mult = 0.10
+		heavy_cavalry_damage_mult = 0.10
+		skirmishers_damage_mult = 0.10
+		vassal_tax_contribution_mult = 0.10
+		vassal_levy_contribution_mult = -0.10
+		monthly_war_income_mult = 0.05
+		cultural_head_fascination_mult = 0.10
+		levy_size = -0.10
+		monthly_tyranny = 0.10
+		stress_gain_mult = 0.10
+
+	ai_Boldness = 5
+	ai_rationality = 10
+	ai_war_chance = 0.04
+	}
+}
+
+warfare_legacy_4 = { # Inherited Tactics
+	legacy = warfare_legacy_track
+
+	character_modifier = {
+		dynasty_opinion = 5
+		martial = 1
+		attacker_advantage = 1
+		men_at_arms_maintenance = -0.05
+		siege_weapon_siege_value_mult = 0.10
+		pikemen_damage_mult = 0.10
+		archers_damage_mult = 0.10
+		heavy_infantry_damage_mult = 0.10
+		light_cavalry_damage_mult = 0.10
+		heavy_cavalry_damage_mult = 0.10
+		skirmishers_damage_mult = 0.10
+		vassal_tax_contribution_mult = 0.10
+		vassal_levy_contribution_mult = -0.10
+		monthly_war_income_mult = 0.05
+		cultural_head_fascination_mult = 0.10
+		levy_size = -0.10
+		monthly_tyranny = 0.10
+		stress_gain_mult = 0.10
+
+	ai_Boldness = 5
+	ai_rationality = 10
+	ai_war_chance = 0.04
+	}
+}
+
+warfare_legacy_5 = { # Private Army
+	legacy = warfare_legacy_track
+
+	unlock_maa = house_guard
+
+	character_modifier = {
+		dynasty_opinion = 5
+		martial = 1
+		attacker_advantage = 1
+		men_at_arms_maintenance = -0.05
+		siege_weapon_siege_value_mult = 0.10
+		pikemen_damage_mult = 0.10
+		archers_damage_mult = 0.10
+		heavy_infantry_damage_mult = 0.10
+		light_cavalry_damage_mult = 0.10
+		heavy_cavalry_damage_mult = 0.10
+		skirmishers_damage_mult = 0.10
+		vassal_tax_contribution_mult = 0.10
+		vassal_levy_contribution_mult = -0.10
+		monthly_war_income_mult = 0.05
+		cultural_head_fascination_mult = 0.10
+		levy_size = -0.10
+		monthly_tyranny = 0.10
+		stress_gain_mult = 0.10
+
+	ai_Boldness = 5
+	ai_rationality = 10
+	ai_war_chance = 0.04
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = warfare_legacy_5_effect
+		}	
+	}
+}
+
+# LAW LEGACIES
+
+law_legacy_1 = { # Mostly Fair
+	legacy = law_legacy_track
+
+	character_modifier = {
+		vassal_opinion = 5
+		diplomacy = 1		
+		levy_size = 0.10
+		vassal_limit = 2
+		vassal_levy_contribution_mult = 0.10
+		vassal_tax_contribution_mult = -0.10
+		army_maintenance_mult = -0.10
+		mercenary_hire_cost_mult = 0.05
+		supply_duration = -0.10
+		men_at_arms_maintenance = 0.05
+		levy_reinforcement_rate = 0.50
+		monthly_county_control_change_add = 0.2
+		controlled_province_advantage = 2
+
+	ai_sociability = 10
+	ai_war_chance = -0.04
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = law_legacy_1_effect
+		}	
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				has_government = feudal_government
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+law_legacy_2 = { # Faithful Magistrates
+	legacy = law_legacy_track
+
+	character_modifier = {
+		vassal_opinion = 5
+		diplomacy = 1		
+		levy_size = 0.10
+		vassal_limit = 2
+		vassal_levy_contribution_mult = 0.10
+		vassal_tax_contribution_mult = -0.10
+		army_maintenance_mult = -0.10
+		mercenary_hire_cost_mult = 0.05
+		supply_duration = -0.10
+		men_at_arms_maintenance = 0.05
+		levy_reinforcement_rate = 0.50
+		monthly_county_control_change_add = 0.2
+		controlled_province_advantage = 2
+
+	ai_sociability = 10
+	ai_war_chance = -0.04
+	}
+}
+
+law_legacy_3 = { # Power and Prosperity
+	legacy = law_legacy_track
+
+	character_modifier = {
+		vassal_opinion = 5
+		diplomacy = 1		
+		levy_size = 0.10
+		vassal_limit = 2
+		vassal_levy_contribution_mult = 0.10
+		vassal_tax_contribution_mult = -0.10
+		army_maintenance_mult = -0.10
+		mercenary_hire_cost_mult = 0.05
+		supply_duration = -0.10
+		men_at_arms_maintenance = 0.05
+		levy_reinforcement_rate = 0.50
+		monthly_county_control_change_add = 0.2
+		controlled_province_advantage = 2
+
+	ai_sociability = 10
+	ai_war_chance = -0.04
+	}
+}
+
+law_legacy_4 = { # Delegated Authority
+	legacy = law_legacy_track
+
+	character_modifier = {
+#		name = law_legacy_4_name
+		vassal_opinion = 5
+		diplomacy = 1		
+		levy_size = 0.10
+		vassal_limit = 2
+		vassal_levy_contribution_mult = 0.10
+		vassal_tax_contribution_mult = -0.10
+		army_maintenance_mult = -0.10
+		mercenary_hire_cost_mult = 0.05
+		supply_duration = -0.10
+		men_at_arms_maintenance = 0.05
+		levy_reinforcement_rate = 0.50
+		monthly_county_control_change_add = 0.2
+		controlled_province_advantage = 2
+
+	ai_sociability = 10
+	ai_war_chance = -0.04
+	}
+}
+
+law_legacy_5 = { # Home Estates
+	legacy = law_legacy_track
+
+	character_modifier = {
+#		name = law_legacy_5_name
+		vassal_opinion = 5
+		diplomacy = 1		
+		levy_size = 0.10
+		vassal_limit = 2
+		vassal_levy_contribution_mult = 0.10
+		vassal_tax_contribution_mult = -0.10
+		army_maintenance_mult = -0.10
+		mercenary_hire_cost_mult = 0.05
+		supply_duration = -0.10
+		men_at_arms_maintenance = 0.05
+		levy_reinforcement_rate = 0.50
+		monthly_county_control_change_add = 0.2
+		controlled_province_advantage = 2
+
+	ai_sociability = 10
+	ai_war_chance = -0.04
+	}
+}
+
+# GUILE LEGACIES
+
+guile_legacy_1 = { # Ominous Reputation
+	legacy = guile_legacy_track
+
+	character_modifier = {
+		independent_ruler_opinion = 5
+		fellow_vassal_opinion = 5
+		liege_opinion = 5
+		clergy_opinion = -10
+		intrigue = 1
+		mercenary_hire_cost_mult = -0.05
+		domain_limit = -1
+		tax_mult = 0.10
+		vassal_tax_contribution_mult = -0.05
+		vassal_levy_contribution_mult = -0.05
+		levy_reinforcement_rate = -0.50
+		holding_build_speed = 0.10
+		holding_build_gold_cost = -0.20
+		holding_build_prestige_cost = -0.20
+		owned_scheme_secrecy_add = 10
+		owned_hostile_scheme_success_chance_add = 4
+		owned_personal_scheme_success_chance_add = 6
+		hostile_scheme_power_mult = 0.04
+		personal_scheme_power_mult = 0.06
+		scheme_discovery_chance_mult = 0.04
+		monthly_piety_gain_mult = -0.05
+		tyranny_gain_mult = -0.10
+
+	ai_greed = -10
+	ai_war_chance = -0.04
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+guile_legacy_2 = { # Long Reach
+	legacy = guile_legacy_track
+
+	effect = {
+		custom_description_no_bullet = {
+			text = guile_legacy_2_effect
+		}	
+	}
+
+	character_modifier = {
+		independent_ruler_opinion = 5
+		fellow_vassal_opinion = 5
+		liege_opinion = 5
+		clergy_opinion = -10
+		intrigue = 1
+		mercenary_hire_cost_mult = -0.05
+		domain_limit = -1
+		tax_mult = 0.10
+		vassal_tax_contribution_mult = -0.05
+		vassal_levy_contribution_mult = -0.05
+		levy_reinforcement_rate = -0.50
+		holding_build_speed = 0.10
+		holding_build_gold_cost = -0.20
+		holding_build_prestige_cost = -0.20
+		owned_scheme_secrecy_add = 10
+		owned_hostile_scheme_success_chance_add = 4
+		owned_personal_scheme_success_chance_add = 6
+		hostile_scheme_power_mult = 0.04
+		personal_scheme_power_mult = 0.06
+		scheme_discovery_chance_mult = 0.04
+		monthly_piety_gain_mult = -0.05
+		tyranny_gain_mult = -0.10
+
+	ai_greed = -10
+	ai_war_chance = -0.04
+	}
+}
+
+guile_legacy_3 = { # Natural Schemers
+	legacy = guile_legacy_track
+
+	character_modifier = {
+		independent_ruler_opinion = 5
+		fellow_vassal_opinion = 5
+		liege_opinion = 5
+		clergy_opinion = -10
+		intrigue = 1
+		mercenary_hire_cost_mult = -0.05
+		domain_limit = -1
+		tax_mult = 0.10
+		vassal_tax_contribution_mult = -0.05
+		vassal_levy_contribution_mult = -0.05
+		levy_reinforcement_rate = -0.50
+		holding_build_speed = 0.10
+		holding_build_gold_cost = -0.20
+		holding_build_prestige_cost = -0.20
+		owned_scheme_secrecy_add = 10
+		owned_hostile_scheme_success_chance_add = 4
+		owned_personal_scheme_success_chance_add = 6
+		hostile_scheme_power_mult = 0.04
+		personal_scheme_power_mult = 0.06
+		scheme_discovery_chance_mult = 0.04
+		monthly_piety_gain_mult = -0.05
+		tyranny_gain_mult = -0.10
+
+	ai_greed = -10
+	ai_war_chance = -0.04
+	}
+}
+
+guile_legacy_4 = { # Venial
+	legacy = guile_legacy_track
+
+	character_modifier = {
+		independent_ruler_opinion = 5
+		fellow_vassal_opinion = 5
+		liege_opinion = 5
+		clergy_opinion = -10
+		intrigue = 1
+		mercenary_hire_cost_mult = -0.05
+		domain_limit = -1
+		tax_mult = 0.10
+		vassal_tax_contribution_mult = -0.05
+		vassal_levy_contribution_mult = -0.05
+		levy_reinforcement_rate = -0.50
+		holding_build_speed = 0.10
+		holding_build_gold_cost = -0.20
+		holding_build_prestige_cost = -0.20
+		owned_scheme_secrecy_add = 10
+		owned_hostile_scheme_success_chance_add = 4
+		owned_personal_scheme_success_chance_add = 6
+		hostile_scheme_power_mult = 0.04
+		personal_scheme_power_mult = 0.06
+		scheme_discovery_chance_mult = 0.04
+		monthly_piety_gain_mult = -0.05
+		tyranny_gain_mult = -0.10
+
+	ai_greed = -10
+	ai_war_chance = -0.04
+	}
+}
+
+guile_legacy_5 = { # Family Connections
+	legacy = guile_legacy_track
+
+	character_modifier = {
+		independent_ruler_opinion = 5
+		fellow_vassal_opinion = 5
+		liege_opinion = 5
+		clergy_opinion = -10
+		intrigue = 1
+		mercenary_hire_cost_mult = -0.05
+		domain_limit = -1
+		tax_mult = 0.10
+		vassal_tax_contribution_mult = -0.05
+		vassal_levy_contribution_mult = -0.05
+		levy_reinforcement_rate = -0.50
+		holding_build_speed = 0.10
+		holding_build_gold_cost = -0.20
+		holding_build_prestige_cost = -0.20
+		owned_scheme_secrecy_add = 10
+		owned_hostile_scheme_success_chance_add = 4
+		owned_personal_scheme_success_chance_add = 6
+		hostile_scheme_power_mult = 0.04
+		personal_scheme_power_mult = 0.06
+		scheme_discovery_chance_mult = 0.04
+		monthly_piety_gain_mult = -0.05
+		tyranny_gain_mult = -0.10
+
+	ai_greed = -10
+	ai_war_chance = -0.04
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = guile_legacy_5_effect
+		}
+	}
+}
+
+# ERUDITION LEGACIES
+
+erudition_legacy_1 = { # Vibrant Court
+	legacy = erudition_legacy_track
+
+	effect = {
+		custom_description_no_bullet = {
+			text = erudition_legacy_1_effect
+		}
+	}
+	
+	character_modifier = {
+		county_opinion_add = 10
+		courtier_and_guest_opinion = 10
+		vassal_opinion = 10
+		short_reign_duration_mult = -0.20
+		Learning = 1
+		domain_limit = 1
+		monthly_lifestyle_xp_gain_mult = 0.05
+		vassal_tax_contribution_mult = -0.15
+		vassal_levy_contribution_mult = -0.15
+		stress_gain_mult = -0.04
+		stress_loss_mult = 0.04
+
+	ai_sociability = 15
+	ai_war_chance = -0.04
+		
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+erudition_legacy_2 = { # Ordained Rulership
+	legacy = erudition_legacy_track
+
+	character_modifier = {
+		county_opinion_add = 10
+		courtier_and_guest_opinion = 10
+		vassal_opinion = 10
+		short_reign_duration_mult = -0.20
+		Learning = 1
+		domain_limit = 1
+		monthly_lifestyle_xp_gain_mult = 0.05
+		vassal_tax_contribution_mult = -0.15
+		vassal_levy_contribution_mult = -0.15
+		stress_gain_mult = -0.04
+		stress_loss_mult = 0.04
+
+	ai_sociability = 15
+	ai_war_chance = -0.04
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = kin_legacy_2_legacy_effect
+		}
+	}
+
+}
+
+erudition_legacy_3 = { # Treasured Knowledge
+	legacy = erudition_legacy_track
+
+
+	character_modifier = {
+		county_opinion_add = 10
+		courtier_and_guest_opinion = 10
+		vassal_opinion = 10
+		short_reign_duration_mult = -0.20
+		Learning = 1
+		domain_limit = 1
+		monthly_lifestyle_xp_gain_mult = 0.05
+		vassal_tax_contribution_mult = -0.15
+		vassal_levy_contribution_mult = -0.15
+		stress_gain_mult = -0.04
+		stress_loss_mult = 0.04
+
+	ai_sociability = 15
+	ai_war_chance = -0.04
+	}
+}
+
+erudition_legacy_4 = { # True Believers
+	legacy = erudition_legacy_track
+	
+	character_modifier = {
+
+		county_opinion_add = 10
+		courtier_and_guest_opinion = 10
+		vassal_opinion = 10
+		short_reign_duration_mult = -0.20
+		Learning = 1
+		domain_limit = 1
+		monthly_lifestyle_xp_gain_mult = 0.05
+		vassal_tax_contribution_mult = -0.15
+		vassal_levy_contribution_mult = -0.15
+		stress_gain_mult = -0.04
+		stress_loss_mult = 0.04
+
+	ai_sociability = 15
+	ai_war_chance = -0.04
+	}
+
+}
+
+erudition_legacy_5 = { # Bureaucrats
+	legacy = erudition_legacy_track
+
+	character_modifier = {
+		county_opinion_add = 10
+		courtier_and_guest_opinion = 10
+		vassal_opinion = 10
+		short_reign_duration_mult = -0.20
+		Learning = 1
+		domain_limit = 1
+		monthly_lifestyle_xp_gain_mult = 0.05
+		vassal_tax_contribution_mult = -0.15
+		vassal_levy_contribution_mult = -0.15
+		stress_gain_mult = -0.04
+		stress_loss_mult = 0.04
+
+	ai_sociability = 15
+	ai_war_chance = -0.04
+	}
+}
+
+# GLORY LEGACIES
+
+glory_legacy_1 = { # Desirable Match
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		councillor_opinion = 5
+		monthly_tyranny = 0.10
+		stewardship = 1
+		short_reign_duration_mult = -0.20
+		vassal_tax_contribution_mult = 0.15
+		vassal_levy_contribution_mult = 0.15
+		garrison_size = 0.20
+		additional_fort_level = 1
+		domain_limit = -1
+		character_capital_county_monthly_development_growth_add = 0.2
+		county_opinion_add = -10
+		army_maintenance_mult = 0.10
+		men_at_arms_maintenance = 0.05
+		holding_build_gold_cost = 0.05
+		title_creation_cost_mult = -0.10
+
+	ai_vengefulness = 10
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				has_government = clan_government
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+glory_legacy_2 = { # Renowned Name
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		councillor_opinion = 5
+		monthly_tyranny = 0.10
+		stewardship = 1
+		short_reign_duration_mult = -0.20
+		vassal_tax_contribution_mult = 0.15
+		vassal_levy_contribution_mult = 0.15
+		garrison_size = 0.20
+		additional_fort_level = 1
+		domain_limit = -1
+		character_capital_county_monthly_development_growth_add = 0.2
+		county_opinion_add = -10
+		army_maintenance_mult = 0.10
+		men_at_arms_maintenance = 0.05
+		holding_build_gold_cost = 0.05
+		title_creation_cost_mult = -0.10
+
+	ai_vengefulness = 10
+	}
+}
+
+glory_legacy_3 = { # Earning Respect
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		councillor_opinion = 5
+		monthly_tyranny = 0.10
+		stewardship = 1
+		short_reign_duration_mult = -0.20
+		vassal_tax_contribution_mult = 0.15
+		vassal_levy_contribution_mult = 0.15
+		garrison_size = 0.20
+		additional_fort_level = 1
+		domain_limit = -1
+		character_capital_county_monthly_development_growth_add = 0.2
+		county_opinion_add = -10
+		army_maintenance_mult = 0.10
+		men_at_arms_maintenance = 0.05
+		holding_build_gold_cost = 0.05
+		title_creation_cost_mult = -0.10
+
+	ai_vengefulness = 10
+	}
+}
+
+glory_legacy_4 = { # Assertive Rulers
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		councillor_opinion = 5
+		monthly_tyranny = 0.10
+		stewardship = 1
+		short_reign_duration_mult = -0.20
+		vassal_tax_contribution_mult = 0.15
+		vassal_levy_contribution_mult = 0.15
+		garrison_size = 0.20
+		additional_fort_level = 1
+		domain_limit = -1
+		character_capital_county_monthly_development_growth_add = 0.2
+		county_opinion_add = -10
+		army_maintenance_mult = 0.10
+		men_at_arms_maintenance = 0.05
+		holding_build_gold_cost = 0.05
+		title_creation_cost_mult = -0.10
+
+	ai_vengefulness = 10
+	}
+}
+
+glory_legacy_5 = { # Righteousness
+	legacy = glory_legacy_track
+
+	effect = {
+		custom_description_no_bullet = {
+			text = glory_legacy_4_perk_effect
+		}
+	}
+
+	character_modifier = {
+		councillor_opinion = 5
+		monthly_tyranny = 0.10
+		stewardship = 1
+		short_reign_duration_mult = -0.20
+		vassal_tax_contribution_mult = 0.15
+		vassal_levy_contribution_mult = 0.15
+		garrison_size = 0.20
+		additional_fort_level = 1
+		domain_limit = -1
+		character_capital_county_monthly_development_growth_add = 0.2
+		county_opinion_add = -10
+		army_maintenance_mult = 0.10
+		men_at_arms_maintenance = 0.05
+		holding_build_gold_cost = 0.05
+		title_creation_cost_mult = -0.10
+
+	ai_vengefulness = 10
+	}
+}
+
+# KIN LEGACIES
+
+kin_legacy_1 = { # Bounteous Loins
+	legacy = kin_legacy_track
+
+	character_modifier = {
+		same_faith_opinion = 5
+		different_faith_opinion = -5
+		different_faith_liege_opinion = -5
+		monthly_piety_gain_per_knight_mult = 0.01
+		faith_creation_piety_cost_mult = -0.10
+		domain_tax_different_faith_mult = -0.10
+		holy_order_hire_cost_mult = -0.05
+		different_faith_county_opinion_mult = 0.20
+		levy_reinforcement_rate_same_faith = 0.40
+		levy_reinforcement_rate_different_faith = -0.40
+		tolerance_advantage_mod = 2
+		learning_per_piety_level = 1
+
+	ai_zeal = 10
+	}
+	
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				has_government = clan_government
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+kin_legacy_2 = { # Studious Youth
+	legacy = kin_legacy_track
+
+	character_modifier = {
+		same_faith_opinion = 5
+		different_faith_opinion = -10
+		different_faith_liege_opinion = -5
+		monthly_piety_gain_per_knight_mult = 0.01
+		faith_creation_piety_cost_mult = -0.10
+		domain_tax_different_faith_mult = -0.10
+		holy_order_hire_cost_mult = -0.05
+		different_faith_county_opinion_mult = 0.20
+		levy_reinforcement_rate_same_faith = 0.40
+		levy_reinforcement_rate_different_faith = -0.40
+		tolerance_advantage_mod = 2
+		diplomacy_per_piety_level = 1
+
+	ai_zeal = 10
+	}
+}
+
+kin_legacy_3 = { # Constant Care
+	legacy = kin_legacy_track
+
+	character_modifier = {
+		same_faith_opinion = 5
+		different_faith_opinion = -10
+		different_faith_liege_opinion = -5
+		monthly_piety_gain_per_knight_mult = 0.01
+		faith_creation_piety_cost_mult = -0.10
+		domain_tax_different_faith_mult = -0.10
+		holy_order_hire_cost_mult = -0.05
+		different_faith_county_opinion_mult = 0.20
+		levy_reinforcement_rate_same_faith = 0.40
+		levy_reinforcement_rate_different_faith = -0.40
+		tolerance_advantage_mod = 2
+		martial_per_piety_level = 1
+
+	ai_zeal = 10
+	}
+
+	effect = {
+		# More likely to accept Demand Conversion requests of all stripes.
+		custom_description_no_bullet = { text = fp1_adventure_legacy_3_effect }
+	}
+
+}
+
+kin_legacy_4 = { # Close Bonds
+	legacy = kin_legacy_track
+
+	character_modifier = {
+		same_faith_opinion = 5
+		different_faith_opinion = -10
+		different_faith_liege_opinion = -5
+		monthly_piety_gain_per_knight_mult = 0.01
+		faith_creation_piety_cost_mult = -0.10
+		domain_tax_different_faith_mult = -0.10
+		holy_order_hire_cost_mult = -0.05
+		different_faith_county_opinion_mult = 0.20
+		levy_reinforcement_rate_same_faith = 0.40
+		levy_reinforcement_rate_different_faith = -0.40
+		tolerance_advantage_mod = 2
+		stewardship_per_piety_level = 1
+
+	ai_zeal = 10
+	}
+}
+
+kin_legacy_5 = { # Graceful Aging
+	legacy = kin_legacy_track
+
+	character_modifier = {
+		same_faith_opinion = 5
+		different_faith_opinion = -10
+		different_faith_liege_opinion = -5
+		monthly_piety_gain_per_knight_mult = 0.01
+		faith_creation_piety_cost_mult = -0.10
+		domain_tax_different_faith_mult = -0.10
+		holy_order_hire_cost_mult = -0.05
+		different_faith_county_opinion_mult = 0.20
+		levy_reinforcement_rate_same_faith = 0.40
+		levy_reinforcement_rate_different_faith = -0.40
+		tolerance_advantage_mod = 2
+		intrigue_per_piety_level = 1
+
+	ai_zeal = 10
+	}
+}

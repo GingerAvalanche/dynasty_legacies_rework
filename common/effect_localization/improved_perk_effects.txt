@@ -1,0 +1,10 @@
+﻿kin_legacy_5_legacy_effect = {
+	global = IMPROVED_GAIN_SKILL_FROM_AGING
+}
+
+erudition_legacy_5_effect = {
+	global = IMPROVED_LEGACY_IMPROVED_COUNCIL_TASKS
+	first = IMPROVED_LEGACY_IMPROVED_COUNCIL_TASKS
+	third = IMPROVED_LEGACY_IMPROVED_COUNCIL_TASKS
+}
+

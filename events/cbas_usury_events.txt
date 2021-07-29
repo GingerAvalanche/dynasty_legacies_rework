@@ -1,0 +1,421 @@
+﻿
+namespace = usury_event
+#------------------------------------------------------player culture merchant
+usury_event.1 = {
+    type = character_event
+    title = usury_event_t
+    desc = { random_valid = {
+					desc = usury_event_desc1 
+					desc = usury_event_desc2 
+					desc = usury_event_desc3 
+					desc = usury_event_desc4 
+					desc = usury_event_desc5 
+					desc = usury_event_desc6 
+					desc = usury_event_desc7 
+				}
+			}
+    theme = intrigue
+	
+#-----------------------------------------------------------LOL it's 5AM man
+	override_background = {
+		trigger = { current_month = 1 }
+		event_background = docks
+	}
+	override_background = {
+		trigger = { current_month = 2 }
+		event_background = market_tribal
+	}
+	override_background = {
+		trigger = { current_month = 3 }
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = { current_month = 4 }
+		event_background = market
+	}
+	override_background = {
+		trigger = { current_month = 5 }
+		event_background = docks
+	}
+	override_background = {
+		trigger = { current_month = 6 }
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = { current_month = 7 }
+		event_background = docks
+	}
+	override_background = {
+		trigger = { current_month = 8 }
+		event_background = market_tribal
+	}
+	override_background = {
+		trigger = { current_month = 9 }
+		event_background = market
+	}
+	override_background = {
+		trigger = { current_month = 10 }
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = { current_month = 11 }
+		event_background = market
+	}
+	override_background = {
+		trigger = { current_month = 12 }
+		event_background = alley_day
+	}
+	
+
+    right_portrait = {
+        character = root
+        animation = steward
+    }
+	
+	left_portrait = { 
+		  
+	      character = scope:exchange_merchant_character
+		  animation = chancellor
+	}
+	
+	immediate = {
+			create_character = {
+					location = root.capital_province
+					template = merchant_template
+					age = { 40 70 }
+					random_traits = yes
+					gender = male	
+					dynasty = none
+					culture = this.culture	
+					save_scope_as = exchange_merchant_character
+				}
+			}
+		
+#---------------------------------------------------------------------------------200
+    option = {
+        name = usury_event_SL
+        custom_tooltip = usury_event_SL
+        
+		show_as_tooltip = {
+			custom_tooltip = usury_event_SL_interest
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+				impatient = minor_stress_impact_loss
+			}
+			add_gold = 250
+			add_character_modifier = {
+				modifier = usury_sin_mod1
+			}
+			add_prestige = -50
+		}
+        hidden_effect = {
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+				impatient = minor_stress_impact_loss
+			}
+			add_gold = 200
+			add_character_modifier = {
+				modifier = usury_sin_mod1
+			}
+			add_prestige = -50
+		}
+    }
+#---------------------------------------------------------------------------------500
+    option = {
+        name = usury_event_ML
+        custom_tooltip = usury_event_ML
+        
+		show_as_tooltip = {
+			custom_tooltip = usury_event_ML_interest
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 750
+			add_character_modifier = {
+				modifier = usury_sin_mod2
+			}
+			add_prestige = -100
+		}
+        hidden_effect = {
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 750
+			add_character_modifier = {
+				modifier = usury_sin_mod2
+			}
+			add_prestige = -100
+		}
+    }
+#---------------------------------------------------------------------------------800
+    option = {
+        name = usury_event_MM
+        custom_tooltip = usury_event_MM
+        
+		show_as_tooltip = {
+			custom_tooltip = usury_event_MM_interest
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 1250
+			add_character_modifier = {
+				modifier = usury_sin_mod3
+			}
+			add_prestige = -100
+			add_piety = -100
+		}
+        hidden_effect = {
+			stress_impact = {
+				zealous = major_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 1250
+			add_character_modifier = {
+				modifier = usury_sin_mod3
+			}
+			add_prestige = -100
+			add_piety = -100
+		}
+    }
+#--------------------------------2000 option not available
+#---------------------------------------------------------------------------------
+    option = {
+        name = usury_event_exit
+		custom_tooltip = usury_event_exit
+    }
+	
+}#---------------------------------------------------------------------------------
+###################################################################################
+###################################################################################
+###################################################################################
+###################################################################################
+#-------------------------------------------------------------------rabbin merchant
+usury_event.2 = {
+    type = character_event
+    title = usury_event_t
+    desc = { random_valid = {
+					desc = usury_event_desc1 
+					desc = usury_event_desc2 
+					desc = usury_event_desc3 
+					desc = usury_event_desc4 
+					desc = usury_event_desc5 
+					desc = usury_event_desc6 
+					desc = usury_event_desc7 
+				}
+			}
+    theme = intrigue
+	
+#-----------------------------------------------------------LOL it's 5AM man
+	override_background = {
+		trigger = { current_month = 1 }
+		event_background = docks
+	}
+	override_background = {
+		trigger = { current_month = 2 }
+		event_background = market_tribal
+	}
+	override_background = {
+		trigger = { current_month = 3 }
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = { current_month = 4 }
+		event_background = market
+	}
+	override_background = {
+		trigger = { current_month = 5 }
+		event_background = docks
+	}
+	override_background = {
+		trigger = { current_month = 6 }
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = { current_month = 7 }
+		event_background = docks
+	}
+	override_background = {
+		trigger = { current_month = 8 }
+		event_background = market_tribal
+	}
+	override_background = {
+		trigger = { current_month = 9 }
+		event_background = market
+	}
+	override_background = {
+		trigger = { current_month = 10 }
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = { current_month = 11 }
+		event_background = market
+	}
+	override_background = {
+		trigger = { current_month = 12 }
+		event_background = alley_day
+	}
+	
+
+    right_portrait = {
+        character = root
+        animation = steward
+    }
+	
+	left_portrait = { 
+		  
+	      character = scope:exchange_merchant_character
+		  animation = chancellor
+	}
+	
+	immediate = {
+			create_character = {
+					location = root.capital_province
+					template = merchant_template
+					age = { 40 70 }
+					random_traits = yes
+					gender = male	
+					faith = faith:rabbinism
+					dynasty = none
+					save_scope_as = exchange_merchant_character
+				}
+			}
+		
+#---------------------------------------------------------------------------------200
+    option = {
+        name = usury_event_SL
+        custom_tooltip = usury_event_SL
+        
+		show_as_tooltip = {
+			custom_tooltip = usury_event_SL_interest
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+				impatient = minor_stress_impact_loss
+			}
+			add_gold = 250
+			add_character_modifier = {
+				modifier = usury_sin_mod1
+			}
+			add_prestige = -60
+		}
+        hidden_effect = {
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+				impatient = minor_stress_impact_loss
+			}
+			add_gold = 250
+			add_character_modifier = {
+				modifier = usury_sin_mod1
+			}
+			add_prestige = -60
+		}
+    }
+#---------------------------------------------------------------------------------500
+    option = {
+        name = usury_event_ML
+        custom_tooltip = usury_event_ML
+        
+		show_as_tooltip = {
+			custom_tooltip = usury_event_ML_interest
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 750
+			add_character_modifier = {
+				modifier = usury_sin_mod2
+			}
+			add_prestige = -125
+		}
+        hidden_effect = {
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 750
+			add_character_modifier = {
+				modifier = usury_sin_mod2
+			}
+			add_prestige = -120
+		}
+    }
+#---------------------------------------------------------------------------------800
+    option = {
+        name = usury_event_MM
+        custom_tooltip = usury_event_MM
+        
+		show_as_tooltip = {
+			custom_tooltip = usury_event_MM_interest
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 1250
+			add_character_modifier = {
+				modifier = usury_sin_mod3
+			}
+			add_prestige = -120
+			add_piety = -120
+		}
+        hidden_effect = {
+			stress_impact = {
+				zealous = major_stress_impact_gain
+				impatient = medium_stress_impact_loss
+			}
+			add_gold = 1250
+			add_character_modifier = {
+				modifier = usury_sin_mod3
+			}
+			add_prestige = -120
+			add_piety = -120
+		}
+    }
+#---------------------------------------------------------------------------------2000
+    option = {
+        name = usury_event_KL
+		custom_tooltip = usury_event_KL
+		
+		show_as_tooltip = {
+			custom_tooltip = usury_event_KL_interest
+			stress_impact = {
+				impatient = major_stress_impact_loss
+				zealous = major_stress_impact_gain
+				content = major_stress_impact_gain
+				greed = minor_stress_impact_gain
+				temperate = minor_stress_impact_gain
+			}
+			add_gold = 2000
+			add_character_modifier = {
+				modifier = usury_sin_mod4
+			}
+			add_prestige = -250
+			add_piety = -250
+		}
+		
+		hidden_effect = {
+			stress_impact = {
+				impatient = major_stress_impact_loss
+				zealous = major_stress_impact_gain
+				content = major_stress_impact_gain
+				greed = minor_stress_impact_gain
+				temperate = minor_stress_impact_gain
+			}
+			add_gold = 2000
+			add_character_modifier = {
+				modifier = usury_sin_mod4
+			}
+			add_prestige = -250
+			add_piety = -250
+		}
+    }
+#---------------------------------------------------------------------------------
+    option = {
+        name = usury_event_exit
+		custom_tooltip = usury_event_exit
+    }
+	
+}#---------------------------------------------------------------------------------
+
+

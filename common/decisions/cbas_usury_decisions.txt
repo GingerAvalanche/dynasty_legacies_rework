@@ -1,0 +1,255 @@
+﻿
+#---------------------------------------------------------------------borrow
+usury_loan_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	desc = usury_loan_decision_desc
+	selection_tooltip = usury_loan_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_adult = yes
+		is_ruler = yes
+		intrigue >= 8
+		
+		NOR = {
+			has_character_modifier = usury_sin_mod1
+			has_character_modifier = usury_sin_mod2
+			has_character_modifier = usury_sin_mod3
+			has_character_modifier = usury_sin_mod4
+			
+		}
+		OR = {
+			faith.religion = religion:islam_religion
+			faith.religion = religion:christianity_religion
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available = yes
+	}
+
+	cooldown = { 
+		days = 120
+	}
+
+	effect = {
+		custom_tooltip = usury_loan_decision_tooltip
+		save_scope_as = actor
+		
+		hidden_effect = {
+		    add_character_flag = {
+				flag = planning_an_activity
+				days = 3
+			}
+			random_list = {
+				1 = { trigger_event = {
+						id = usury_event.1
+						days = { 2 3 }
+						}
+					}
+				1 = { trigger_event = {
+						id = usury_event.2
+						days = { 2 3 }
+						}
+					} 
+			}
+		}	
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+#---------------------------------------------------------------------repay
+repay_loan_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+
+    desc = repay_loan_decision_desc
+	selection_tooltip = repay_loan_decision_tooltip
+	
+	ai_check_interval = 0
+
+    is_shown = {
+		is_adult = yes
+		is_ruler = yes
+		has_character_modifier = usury_sin_mod1 
+	}
+
+	cost = {
+		gold = 300
+	}
+
+	effect = {
+		custom_tooltip = repay_loan_decision_effect
+		remove_character_modifier = usury_sin_mod1
+		
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			deceitful = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			gluttonous = minor_stress_impact_gain
+			
+			temperate = minor_stress_impact_loss
+			craven = minor_stress_impact_loss
+			just = minor_stress_impact_loss
+			honest = minor_stress_impact_loss
+			trusting = minor_stress_impact_loss
+		}
+	
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+#---------------------------------------------------------------------repay2
+repay_loan_decision2 = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+
+    desc = repay_loan_decision_desc
+	selection_tooltip = repay_loan_decision_tooltip
+	
+	ai_check_interval = 0
+
+    is_shown = {
+		is_adult = yes
+		is_ruler = yes
+		has_character_modifier = usury_sin_mod2 
+	}
+
+	cost = {
+		gold = 850
+	}
+
+	effect = {
+		custom_tooltip = repay_loan_decision_effect
+		remove_character_modifier = usury_sin_mod2
+		
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			ambitious = medium_stress_impact_gain
+			deceitful = medium_stress_impact_gain
+			arbitrary = medium_stress_impact_gain
+			gluttonous = medium_stress_impact_gain
+			
+			temperate = medium_stress_impact_loss
+			craven = medium_stress_impact_loss
+			just = medium_stress_impact_loss
+			honest = medium_stress_impact_loss
+			trusting = medium_stress_impact_loss
+		}
+		
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+#---------------------------------------------------------------------repay3
+repay_loan_decision3 = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+
+    desc = repay_loan_decision_desc
+	selection_tooltip = repay_loan_decision_tooltip
+	
+	ai_check_interval = 0
+
+    is_shown = {
+		is_adult = yes
+		is_ruler = yes
+		has_character_modifier = usury_sin_mod3 
+	}
+
+	cost = {
+		gold = 1400
+	}
+
+	effect = {
+		custom_tooltip = repay_loan_decision_effect
+		remove_character_modifier = usury_sin_mod3
+		
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			ambitious = medium_stress_impact_gain
+			deceitful = medium_stress_impact_gain
+			arbitrary = medium_stress_impact_gain
+			gluttonous = medium_stress_impact_gain
+			
+			temperate = medium_stress_impact_loss
+			craven = medium_stress_impact_loss
+			just = medium_stress_impact_loss
+			honest = medium_stress_impact_loss
+			trusting = medium_stress_impact_loss
+		}
+		
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+#---------------------------------------------------------------------repay4
+repay_loan_decision4 = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+
+    desc = repay_loan_decision_desc
+	selection_tooltip = repay_loan_decision_tooltip
+	
+	ai_check_interval = 0
+
+    is_shown = {
+		is_adult = yes
+		is_ruler = yes
+		has_character_modifier = usury_sin_mod4 
+	}
+
+	cost = {
+		gold = 2250
+	}
+
+	effect = {
+		custom_tooltip = repay_loan_decision_effect
+		remove_character_modifier = usury_sin_mod4
+		
+		stress_impact = {
+			greedy = major_stress_impact_gain
+			ambitious = major_stress_impact_gain
+			deceitful = major_stress_impact_gain
+			arbitrary = major_stress_impact_gain
+			gluttonous = major_stress_impact_gain
+			
+			temperate = major_stress_impact_loss
+			craven = major_stress_impact_loss
+			just = major_stress_impact_loss
+			honest = major_stress_impact_loss
+			trusting = major_stress_impact_loss
+		}
+		
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

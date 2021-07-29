@@ -1,0 +1,195 @@
+﻿
+### Legacy - dynasty perks
+
+
+dynasty_1_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 2 0 }
+	icon = node_legacy
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		dynasty_opinion = 10
+		learning = 3
+		}
+
+
+	}
+
+
+dynasty_2_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 0 1.25 }
+	icon = node_legacy
+
+	parent = dynasty_1_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		powerful_vassal_opinion = 10
+		diplomacy = 3
+		}
+
+
+	}
+
+
+dynasty_3_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 0 2.5 }
+	icon = node_legacy
+
+	parent = dynasty_2_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		domain_limit = 1
+		stewardship = 3
+		}
+
+	}
+
+
+dynasty_4_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 2 1.25 }
+	icon = node_legacy
+
+	parent = dynasty_1_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.15
+		monthly_income_mult = 0.05
+		}
+
+
+	}
+
+
+dynasty_5_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 2 2.5 }
+	icon = node_legacy
+
+	parent = dynasty_4_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.15
+		monthly_prestige_gain_mult = 0.05
+		}
+
+
+	}
+
+
+dynasty_6_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 4 1.25 }
+	icon = node_legacy
+
+	parent = dynasty_1_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		hard_casualty_modifier = -0.20
+		martial = 3
+		}
+
+	}
+
+
+dynasty_7_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 4 2.5 }
+	icon = node_legacy
+
+	parent = dynasty_6_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		max_personal_schemes_add = 1
+		intrigue = 3
+		}
+
+	}
+
+
+dynasty_8_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 2 3.75 }
+	icon = node_legacy
+
+	parent = dynasty_3_perk
+	parent = dynasty_5_perk
+	parent = dynasty_7_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.20
+		monthly_prestige_gain_mult = 0.05
+		monthly_income_mult = 0.05
+		}
+
+
+	}
+
+dynasty_9_perk = {
+	lifestyle = legacy_lifestyle
+	tree = dynasty
+	position = { 2 5 }
+	icon = trait_elder
+
+	parent = dynasty_8_perk
+
+	auto_selection_weight = {
+		value = 11
+
+	}
+
+	effect = {
+        add_trait_force_tooltip = elder }
+
+
+	}

@@ -1,0 +1,15 @@
+
+
+monthly_gain_manipulation_ai = {
+	default = slightly_higher_monthly_gain_ai
+	default_monthly_gain_ai = {}
+	slightly_higher_monthly_gain_ai = { apply_modifier = ai:slightly_higher_monthly_gain }
+	higher_monthly_gain_ai = { apply_modifier = ai:higher_monthly_gain }
+}
+
+monthly_gain_manipulation_player = {
+	default = slightly_higher_monthly_gain_player
+	default_monthly_gain_player = {}
+	slightly_higher_monthly_gain_player = { apply_modifier = player:slightly_higher_monthly_gain_player }
+	higher_monthly_gain_player = { apply_modifier = player:higher_monthly_gain_player }
+}

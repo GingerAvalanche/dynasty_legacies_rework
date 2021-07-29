@@ -1,0 +1,82 @@
+﻿# called when a war is started.
+# same scopes are available in these events as in the CBs' on_declaration, this just fires for all CBs instead of a specific CB.
+on_war_started = {
+	on_actions = {
+		vta_on_war_started
+	}
+}
+
+vta_on_war_started = {
+	effect = {
+		# Vassals To Arms Mod - save target_title as new scope
+		scope:war = {
+			casus_belli = {
+				random_target_title = {
+					save_scope_as = war_target_title
+				}
+			}
+		}
+		scope:attacker = {
+			# BEGIN: Vassals To Arms Mod
+			if = {
+				limit = {
+					exists = scope:claimant
+					OR = {
+						has_game_rule = vta_rule_attacker
+						has_game_rule = vta_rule_both
+					}
+					scope:claimant = { is_vassal_or_below_of = scope:attacker }
+				}
+				scope:claimant = { trigger_event = { id = vassals_to_arms.0002 days = 3 } }
+			}
+		}
+		scope:war = {
+			scope:defender = {
+				# BEGIN: Vassals To Arms Mod
+				if = {
+					limit = {
+						exists = scope:war_target_title
+						OR = {
+							has_game_rule = vta_rule_defender
+							has_game_rule = vta_rule_both
+						}
+					}
+					every_vassal_or_below = {
+						limit = {
+							OR = {
+								any_sub_realm_county = {
+									target_is_de_jure_liege_or_above = scope:war_target_title
+								}
+								scope:war_target_title.holder = {
+									OR = {
+										this = PREV
+										is_vassal_or_below_of = PREV
+									}
+								}
+							}
+						}
+						trigger_event = {
+							id = vassals_to_arms.0001
+							days = 3
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						scope:war = {
+							using_cb = tribal_subjugation_cb
+						}
+					}
+					every_vassal = {
+						trigger_event = {
+							id = vassals_to_arms.0001
+							days = 3
+						}
+					}
+				}
+				# END: Vassals To Arms Mod
+			}
+		}
+	}
+}
+

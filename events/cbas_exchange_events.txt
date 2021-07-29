@@ -1,0 +1,291 @@
+﻿##################################################################
+# MAJOR EVENTS
+##################################################################
+
+##################################################################
+namespace = cbas_exchange_event
+##################################################################
+
+
+
+
+##################################################################
+#"Send your soldiers to extort compensations" --------------------------prestige_gold
+##################################################################
+cbas_exchange_event.1 = { 
+	
+	type = character_event
+	title = prestige_wealth_event_title
+	desc = { random_valid = {
+				desc = prestige_wealth_event_desc1
+				desc = prestige_wealth_event_desc2
+				desc = prestige_wealth_event_desc3
+				desc = prestige_wealth_event_desc4
+				desc = prestige_wealth_event_desc5
+			}
+	}
+	
+	override_background = {
+			event_background = dungeon
+	}
+	
+	theme = intrigue 
+	
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	
+	left_portrait = {
+		 character = cp:councillor_marshal
+		 animation = steward
+	 }
+	
+	
+	option = { 
+		name = prestige_wealth_btn
+		custom_tooltip = prestige_wealth_btn
+		
+		show_as_tooltip = {
+				add_intrigue_lifestyle_xp = 100
+				add_martial_lifestyle_xp = 100
+				add_gold = gold_exchange_reward_value 
+				add_dread = dread_exchange_reward_value 
+				county_opinion_add = -20
+		}
+		
+		hidden_effect = {
+				add_intrigue_lifestyle_xp = 100
+				add_martial_lifestyle_xp = 100
+				add_gold = gold_exchange_reward_value
+				add_dread = dread_exchange_reward_value
+				county_opinion_add = -20
+		}
+		
+	}		
+}
+
+##################################################################
+# "Atend mass"------------------------------------------------------- prestige_piety 
+##################################################################
+
+cbas_exchange_event.2 = {  
+	
+	type = character_event
+	title = prestige_piety_event_title
+	desc = { random_valid = {
+					desc = prestige_piety_event_desc1
+					desc = prestige_piety_event_desc2
+					desc = prestige_piety_event_desc3
+					desc = prestige_piety_event_desc4
+					desc = prestige_piety_event_desc5
+			    }
+	     }
+	
+	override_background = {
+			event_background = temple_scope
+	}
+	
+	theme = diplomacy 
+	
+	right_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	left_portrait = {
+		 character = cp:councillor_court_chaplain
+		 animation = personality_greedy
+	 }
+	
+	
+	option = { 
+		name = prestige_piety_btn
+		custom_tooltip = prestige_piety_btn
+		
+		show_as_tooltip = {
+			add_piety = major_piety_exchange_reward_value
+			add_learnig_lifestyle_xp = 100
+			add_diplomacy_lifestyle_xp = 100
+			vassal_opinion = -5
+				
+		}
+		
+		hidden_effect = {
+			add_piety = major_piety_exchange_reward_value
+			add_learnig_lifestyle_xp = 100
+			add_diplomacy_lifestyle_xp = 100
+			vassal_opinion = -5
+					
+		}
+		
+	}		
+}
+
+##################################################################
+## "Get rid of obnoxious preachers"-------------------------------------piety_prestige
+##################################################################
+
+cbas_exchange_event.3 = { 
+	
+	type = character_event
+	title = piety_prestige_event_title
+	desc = { random_valid = {
+			desc = piety_prestige_event_desc1
+			desc = piety_prestige_event_desc2
+			desc = piety_prestige_event_desc3
+			desc = piety_prestige_event_desc4
+			desc = piety_prestige_event_desc5
+			}
+	}
+	
+	override_background = {
+			event_background = throne_room_scope
+	}
+	
+	theme = intrigue
+	
+	right_portrait = {
+		character = cp:councillor_court_chaplain
+		animation = fear
+	}
+	
+	left_portrait = {
+		 character = cp:councillor_spymaster
+		 animation = ecstasy
+	 }
+	
+	option = { 
+		name = piety_prestige_btn
+		custom_tooltip = piety_prestige_btn
+		
+		show_as_tooltip = {
+			add_prestige = major_prestige_exchange_reward_value 
+			add_dread = dread_exchange_reward_value 
+			add_intrigue_lifestyle_xp = 100
+			clergy_opinion = -10
+		
+		}
+		
+		hidden_effect = {
+			add_prestige = major_prestige_exchange_reward_value	
+			add_dread = dread_exchange_reward_value
+			add_intrigue_lifestyle_xp = 100
+			clergy_opinion = -10	
+		}
+		
+	}		
+}
+
+##################################################################
+# "Collect from the people"---------------------------------------------------------piety_wealth
+##################################################################
+
+cbas_exchange_event.4 = { 
+	
+	type = character_event
+	title = piety_wealth_event_title
+	desc = { random_valid = {	
+					desc = piety_wealth_event_desc1
+					desc = piety_wealth_event_desc2
+					desc = piety_wealth_event_desc3
+					desc = piety_wealth_event_desc4
+					desc = piety_wealth_event_desc5
+				}
+	}
+	
+	
+	
+	override_background = {
+			event_background = council_chamber
+	}
+	
+	theme = stewardship
+	
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = steward
+	}
+	
+	left_portrait = {
+		 character = cp:councillor_chancellor
+		 animation = ecstasy
+	 }
+	
+	option = { 
+		name = piety_wealth_btn
+		custom_tooltip = piety_wealth_btn
+		
+		show_as_tooltip = {
+			add_gold = gold_exchange_reward_value
+			add_diplomacy_lifestyle_xp = 100
+			add_stewardship_lifestyle_xp = 100
+			county_opinion_add = -10
+			
+		}
+		
+		hidden_effect = {
+			add_gold = gold_exchange_reward_value
+			add_diplomacy_lifestyle_xp = 100
+			add_stewardship_lifestyle_xp = 100
+			county_opinion_add = -10
+		}
+		
+	}		
+}
+
+##################################################################
+# # all_renown-------------------------------------------------------------Strengthen my family's notoriety
+##################################################################
+cbas_exchange_event.5 = { 
+	
+	type = character_event
+	title = all_renown_event_title
+	desc = { random_valid = { 
+					desc = all_renown_event_desc1
+					desc = all_renown_event_desc2
+					desc = all_renown_event_desc3
+					desc = all_renown_event_desc4
+					desc = all_renown_event_desc5
+					}
+	}
+	
+	
+	override_background = {
+			event_background = throne_room_scope
+	}
+	
+	theme = dynasty
+	
+	right_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	
+	option = { 
+		name = all_renown_btn
+		custom_tooltip = all_renown_btn
+		
+		show_as_tooltip = {
+			add_diplomacy_lifestyle_xp = 100
+			add_stewardship_lifestyle_xp = 100
+				root = {
+					dynasty = {
+						add_dynasty_prestige = 500
+					}
+				}
+			}
+		
+		hidden_effect = {
+			add_diplomacy_lifestyle_xp = 100
+			add_stewardship_lifestyle_xp = 100
+				root = {
+					dynasty = {
+						add_dynasty_prestige = 500
+					}
+				}
+			
+		}
+		
+	}		
+}

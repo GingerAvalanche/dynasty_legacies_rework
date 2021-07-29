@@ -1,0 +1,130 @@
+﻿NDomain = {
+	ABOVE_LIMIT_LEVY_PENALTY = 0.30				# How much levies are reduced per holding over the limit
+	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.30		# How much tax income from domain is reduced per holding over the limit	
+
+	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 99	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
+	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 1.0		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	TAX_AT_MAX_COUNTY_DEVELOPMENT = 1.0			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+}
+
+NCharacter = {
+	FEMALE_ADULT_AGE = 14
+
+	MAXIMUM_DIPLOMATIC_RANGE = 500
+	MAXIMUM_DIPLOMATIC_RANGE_RESTRICTED = 250
+	MAX_COUNTIES_IN_REALM_AS_DUKE = 10				
+}
+
+NFaction =
+{
+	COUNTY_CREATE_MIN_SCORE = 25					# Minimum score to necessary to even consider create a faction
+	MAX_POWER = 300									# Max power reachable
+	DEFAULT_POWER_THRESHOLD = 125					# The default power threshold if there no one defined.
+	POTENTIAL_FORCE_JOIN_HOOK_TYPE = "weak" # The type of hook that means the UI will show a member as potentially joining
+}
+
+NProvince = {
+	BASE_SUPPLY_LIMIT = 3500					# The unmodified base supply limit of a province
+	SUPPLY_PER_DEVELOPMENT = 200				# Each development adds this much sto the supply limit
+	BARONY_BUILDING_SLOTS = 5
+	COUNTY_BUILDING_SLOTS = 6
+}
+
+NDynasty = {
+	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY = 0.125
+
+	PERK_COST_BASE = 500		
+	PERK_COST_MULTIPLIER = 1000	
+	LEVELS_PRESTIGE = { 500	1500	3000	5000	8000	12000	16000	22000	28000	35000 }
+
+}
+
+NCombat = {
+	COMBAT_ROLL_DAYS = 30							# How many days are there between rolls?
+	COMBAT_EVENT_DAYS = 5							# How many days are there between knight events?
+	DAMAGE_SCALING_FACTOR = 0.025					# Scaling factor for dealing damage in combat
+	PURSUIT_PHASE_DAYS = 5							# How many days should the pursuit phase be
+	MANEUVER_PHASE_DAYS = 5							# How many days should the maneuver phase last
+	LEVY_TOUGHNESS = 12								# How much toughness does each levy soldier have
+	LEVY_ATTACK = 6								# How much attack does each levy soldier have
+	COMMANDER_MIN_ROLL = -10
+	COMMANDER_MAX_ROLL = 10
+	BASE_RATIO_CASUALTIES_CONVERSION = 0.4			# How many of the soft casualties should be converted to hard casualties during the main phase
+	BASE_TOUGHNESS_TO_PURSUIT = 0.2	
+        MINIMUM_PURSUIT_DAMAGE = 0.2				# High screen can't bring casualties below 1% in the pursuit phase
+}
+
+NRetreat = {
+
+	SHATTERED_RETREAT_MAX_PROVINCES = 7
+
+}
+
+NArmy = {
+	MOVEMENT_SPEED_BONUS_FRIENDLY_AREA = 0.25		# In friendly areas you get a 20% speed bonus
+	GOLD_COST_PER_SOLDIER = 0.002					# Gold maintenance cost per soldier
+	RAID_ARMY_COST_MULT = 0.25						# Maintenance of raid armies is multiplied by this
+
+	FULL_SUPPLY = 100								# Fully supplied units' supply value
+	SUPPLY_LOSS_AT_SEA = 2							# This is the supply loss at sea after the ATTRITION_AFTER_DAYS grace period
+	SUPPLY_LOSS_PER_SOLDIER_ABOVE_LIMIT = 0.0005		# Each check's supply loss per every soldier over the province's supply limit
+	SUPPLY_LOSS_MINIMUM = 3							# This is the minimum supply limit loss (before commander effects)
+	SUPPLY_LOSS_MAXIMUM = 6						# This is the maximum supply limit loss (after commander effects)
+	SUPPLY_GAIN_BELOW_LIMIT = 20					# Each check's supply gain under or at the province's supply limit
+	SUPPLY_OWN_REALM = 0.15							# Extra supply within top realm
+	SUPPLY_OWN_SUB_REALM = 0.3						# Extra supply within subrealm
+	MINIMUM_SUPPLY_LIMIT = 1500						# Supply limit will never ever be lower than this
+	NO_SUPPLY_LOSS_DAYS = 30						# After gathering, armies won't lose supplies for this number of days
+	
+	}
+
+NFleet = {
+	FLEET_SPEED = 10						# Fleet speed
+	EMBARK_GOLD_COST_PER_HUNDRED = 1		# Embark cost for every hundred units
+	GOLD_COST_MAINTENANCE_MULT = 0.30		# Increase in the gold maintenance for armies that are embarked
+}
+
+NPowerfulVassal = {
+	# The number of vassals that are considered 'powerful' depending on the primary title tier (unlanded, baron, count, duke, king, emperor)
+	NUM_PER_TIER = { 0 0 1 2 3 4 }
+
+	# To calculate the value (rank):
+	VALUE_FACTOR = 1.25					# Rubber banding value for current powerful vassals
+	VALUE_MILITARY_MULT = 2				# Multiplier applied to the military strength of the vassal
+	VALUE_TIER_MULT = 100000				# Multiplier applied to the tier of the vassal
+	VALUE_INCOME_MULT = 50				# Multiplier applied to the income of the vassal
+}
+
+#NReligion = {
+#	DEFAULT_FERVOR = 50				# Default fervor
+#}
+
+NImprisonment = {
+	RANSOM_COST_BY_TIER = {
+		25		# Unlanded
+		50		# Baron
+		100		# Count
+		200		# Duke
+		500		# King
+		1000		# Emperor
+	}
+}
+
+NMercenary = {
+	LEVIES = { 500 1000 1500 }				# The base numbers of levies for levels of mercenary bands
+	MAA_REGIMENTS = { 2 3 4 }				# The number of MAA regiments for levels of mercenary bands
+	NUM_KNIGHTS = { 3 4 5 }					# The number of knights for levels of mercenary bands
+	MAA_REGIMENT_SIZES = { 3 4 5 }	# The base sizes of MAA regiments for levels of mercenary bands, in number of sub-regiments
+	LEVY_COST_PER_100_SOLDIERS = 8.0		# The cost of the levy regiment part of mercenary companies, per 100 soldiers for better precision
+	MAA_COST_RATIO = 0.5					# The cost of the MAA regiments of mercenary companies as a fraction of what those regiments cost when buying them
+	REALM_SIZE_MULT = 0.05					# The cost will increase by this many percent multiplied by the square root of the hirer's realm size (# of counties)
+	ALLOWED_DEBT_MONTHS = 24				# How many months of monthly income in dept are characters allowed to have before being blocked from hiring mercenaries
+	REINFORCEMENT_FACTOR = 3.0				# How much faster do mercenary regiments reinforce than regular regiments
+}
+
+NHolyOrder = {
+	NUM_MAA_BASE = 3
+	NUM_MAA_PER_HOLDING = 2
+	NUM_HOLDINGS_PER_MAA_REGIMENT = 4
+	MAA_COST_RATIO = 0.3
+}

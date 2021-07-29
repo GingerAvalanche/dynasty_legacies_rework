@@ -1,0 +1,45 @@
+# Standard Values
+@pos_compat_high = 30
+@pos_compat_medium = 15
+@pos_compat_low = 5
+
+@neg_compat_high = -30
+@neg_compat_medium = -15
+@neg_compat_low = -5
+
+############### Physical ##############
+
+################# PHYSICAL (GOOD) ################
+
+################# PHYSICAL (BAD) ################
+
+albino = {
+	index = 158
+	
+	#inherit_chance = 100 # recessive
+	genetic = yes
+	physical = yes
+	good = yes
+
+	birth = 0.5
+	random_creation = 0.5
+	
+	general_opinion = -10
+	same_opinion = 30
+	
+	dread_baseline_add = 15
+	
+	ruler_designer_cost = 20
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_albino_desc
+			}
+			desc = trait_albino_character_desc
+		}
+	}
+}

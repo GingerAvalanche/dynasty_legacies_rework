@@ -1,0 +1,79 @@
+﻿ #######################################################
+ # MAJOR EVENTS DESC
+ #######################################################
+
+
+l_english:
+
+
+ random_event_spread:0 "Word of your generosity may spread."
+
+
+ prestige_wealth_event_title:0 "News from my $knight_culture_player_plural_no_tooltip_lowercase$ "
+ 
+ prestige_wealth_event_desc1:0 "I've sent my loyal $knight_culture_player_plural_no_tooltip_lowercase$  in secret to extort compensations from the peasantry around the realm.\n\nMy honor was at stake but they did well.\n\nNow is time to collect!\n\n"My liege we were able to collect a reasonable sum!"\n\n"We were even able to dismantle a shady business that seemed to be diverting tax from your Highness.""
+ prestige_wealth_event_desc2:0 "I've been summoned by marshall who wanted to speak to me in private.\nApparently the mission previously required was a success.\n"Your Excellence."\n"I have great news."\n\n"we were able to collect a reasonable sum!"\n"We have also confiscated some dubious books from a merchant that might be of interest to you!""
+ prestige_wealth_event_desc3:0 "Today was not going as it should, until I received word from my marshall to meet him in the dungeons.\nThis could be news about the secret mission I ordered a few days ago.\n\n"You finally here my liege!"\n"Here!.. Coin from the rabble, take it!"\n"Someone is coming""
+ prestige_wealth_event_desc4:0 "My dungeon is covered in roots, puddles of water and moss.\nMy torch allows me to see prison cells, frayed and absorbed by time itself.\nAs I inspect the state of my crumbling castle my marshall arrives.\n\n"Your Excellence so good to see you here!"\n"I have great news from our secret endeavour!"\n"Here, see for yourself..""
+ prestige_wealth_event_desc5:0 "All the noise from the great hall are whispers now, that are barely audible as you enter the lower halls of your palace.\nI've reached the dungeon.\nMy marshall awaits impatient.\n\n"Sir quick!"\n"Before someone sees us.. take it!"\n"It's from our $knight_culture_player_plural_no_tooltip_lowercase$ !""
+ 
+ prestige_wealth_btn:0 "Time to collect"
+ #--------------------------------------------------------------
+ prestige_piety_event_title:0 "Religious endeavours"
+ 
+ prestige_piety_event_desc1:0 "The [ROOT.Char.GetFaith.HouseOfWorship] was full, and the smell of wine, shit and sweat could almost be tasted in the air.\n\nThe realm [ROOT.Char.GetFaith.BishopNeuter] who accompanied me winced as his colleague raged about the brimstones of [ROOT.Char.GetFaith.NegativeAfterLife].\nEither the parishioners were immune to it through overexposure or they were crippled with anxiety,\nscared witless that every and any bad thought would expel them from [ROOT.Char.GetFaith.HighGodName]'s love.\n\n"Repent!"\n\nAnd he ravaged for hours..\n\nAt the end of mass we spoke, together with the other monks.\n\nIssues were settled and the monks were appeased."
+ prestige_piety_event_desc2:0 "A hunched figure cloaked in black kneels in front of the [ROOT.Char.GetFaith.ReligiousSymbol]. The smooth beads of the rosary are interlaced in the long, pale fingers of his trembling hands.\n\n"Forgive me Father for I have..."\n"Burp.." "Hic.."\n\nThe peasants start whispering and shouting!!\n"Shame!..." "Sinner!.."\n\nOne of the wenches at the back exclaims:\n\n"Well that was for sure a long night!"\n\nThe peasantry laughs". 
+ prestige_piety_event_desc3:0 "Today mass was boring...\nI miss the days when sermon was about fornication and the gates of [ROOT.Char.GetFaith.NegativeAfterLife]!!\n\nWhen did these monks get so serious?\n\nAt least my [ROOT.Char.GetFaith.BishopNeuter] seems to have enjoyed it."
+ prestige_piety_event_desc4:0 "Today there was no mass.\nApparently the local priest got beaten by some wenches last night.\nWhat in [ROOT.Char.GetFaith.HighGodName]'s name are my monks doing?!\n\nMy [ROOT.Char.GetFaith.BishopNeuter] arrived in time to help me with my confession at least."
+ prestige_piety_event_desc5:0 ""Therefore one shall leave his father and his mother and hold fast to his wife, and they shall become one flesh!"\n"And he has given us this command: Anyone who loves [ROOT.Char.GetFaith.HighGodName] must also love his messenger!"\n"Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of [ROOT.Char.GetFaith.HighGodName]"\n\nWhat is this priest talking about?"
+ 
+ prestige_piety_btn:0 "Leave"
+ #--------------------------------------------------------------
+ piety_prestige_event_title:0 "Obnoxious preachers"
+ 
+ 
+ piety_prestige_event_desc1:0 "As I listen to another dull sermon from my councilor [ROOT.Char.GetFaith.BishopNeuter] my spymaster approaches:\n\n"My Liege!"\n"I received news from our friends at the armory."\n"Those jossers preaching against your Highness at the market have been taken care of."\n\n My [ROOT.Char.GetFaith.BishopNeuter]'s face turns white."
+ piety_prestige_event_desc2:0 "As I arrive to the great hall I see my spymaster and my [ROOT.Char.GetFaith.BishopNeuter] engaging in a angry discussion.\nApparently some monks were beaten up at the market square.\nMy spymaster winks at me.\n\nWell that seems to be great news!"
+ piety_prestige_event_desc3:0 "My meeting with the concerned courtiers at the great hall is almost over, when my spymaster secretly tells me that the preachers in the city have been successfully invited out.\nMy [ROOT.Char.GetFaith.BishopNeuter] must have heard him because his reaction was priceless."
+ piety_prestige_event_desc4:0 "The great hall was full.\nOne of the courtiers approaches and comments that the streets are calmer.\nApparently there are no longer monks in the market preaching the end of the world.\n\nMy spymaster laughs and shakes his head positively in my direction.\n\nThe [ROOT.Char.GetFaith.BishopNeuter] isn't feeling so well."
+ piety_prestige_event_desc5:0 "Another day meeting the court at the great hall.\nToday the topic of conversation was the sudden disappearance of one of the [ROOT.Char.GetFaith.PriestNeuterPlural] no one liked.\n\nOne courtier shouts:\n\n"Maybe next time they would be so kind to take our [ROOT.Char.GetFaith.BishopNeuter] as well"\n\nMy spymaster winks at me."
+ 
+ piety_prestige_btn:0 "At last some good news!"
+ 
+ #--------------------------------------------------------------
+ piety_wealth_event_title:0 "A generous donation"
+ 
+ piety_wealth_event_desc1:0 "As arrive at the council room to deal with the monthly due diligence, my chancellor approaches in ecstasy accompanied by my steward.\n\n"Great news sir!"\n"Our [ROOT.Char.GetFaith.BishopNeuter] efforts to collect donations during masses has been enormously beneficial."\n"Our realm will definitely make a good use of this sum.""
+ piety_wealth_event_desc2:0 "Another great council meeting comes to an end.\n\nMy chancellor approaches accompanied by my steward.\n"My liege the donations collected from our fellow [ROOT.Char.GetFaith.GetAdherentName] during the masses have just arrived.""
+ piety_wealth_event_desc3:0 "Another day meeting with my councilors.\nToday's the topic of conversation was the arrival of a large sum of coin gathered from our generous [ROOT.Char.GetFaith.GetAdherentName] peasants during mass.\n\nI could really have more conversations like this."
+ piety_wealth_event_desc4:0 "As I listen to another dull explanation about how to manage my finances my steward my chancellor approaches:\n\n"My Liege!"\n"I received news from our [ROOT.Char.GetFaith.BishopNeuter]!"\n"He is coming to deliver a safe full of donations collected from the peasantry.""
+ piety_wealth_event_desc5:0 "Today was not going as it should, until I received word from my chancellor to meet him in the council room.\nThis could be news about the coin I asked to be collected by my [ROOT.Char.GetFaith.BishopNeuter].\n\nMy chancellor is accompanied by my steward.\n"You're finally here my liege!"\n"Here, coin from the peasants!""
+ 
+ piety_wealth_btn:0 "God is among us!"
+#--------------------------------------------------------------
+ all_renown_event_title:0 "Family Heirlooms"
+ 
+ 
+ all_renown_event_desc1:0 "My commissioned art crafts have finally arrived.\n\nMasons gather around a statue of my forefather,\ndiscussing the troubles of the craft with fellow sculptors and painters,\nnobles from the court and relatives of mine roam the room whispering to each other as they pass through a large painting that was just revealed,\nadmiration and enchantment is evident, but I can also see envy.\n\nEven so, my close family is loving it."
+ all_renown_event_desc2:0 "Today the main hall is full.\nCourtiers admiring paintings, statues and other varied artifacts that carry my family's emblem.\n\nMy order has arrived.\n\nA day to be remembered."
+ all_renown_event_desc3:0 "My commissioned art crafts have finally arrived.\n\nA large covered square object is being carried through the center of the main hall, the courtiers watch carefully in envy when a large cloth is removed from the object.\nIt's a painting portraying my family.\nA masterpiece without a doubt.\n\nBut .. Do I really look like that?"
+ all_renown_event_desc4:0 "My commissioned art crafts have finally arrived.\n\n"To live in hearts we leave behind is not to die.""
+ all_renown_event_desc5:0 ""We carry the dead with us only until we die too, and then it is we who are borne along for a little while, and then our bearers in their turn drop, and so on into the unimaginable generations.""
+ all_renown_btn:0 "One lives to become a memory" 
+
+
+ #######################################################
+ # dynamic tags
+ #######################################################
+ # [ROOT.Char.GetFaith.ReligiousSymbol]
+ # [ROOT.Char.GetFaith.GetAdherentName]
+ # [ROOT.Char.GetFaith.PriestNeuter]
+ # [ROOT.Char.GetFaith.PriestNeuterPlural]
+ # [ROOT.Char.GetFaith.HouseOfWorship]
+ # [ROOT.Char.GetFaith.BishopNeuter]
+ # [ROOT.Char.GetFaith.PositiveAfterLife]
+ # [ROOT.Char.Custom('FortifiedBuilding')]
+ #  $knight_culture_player_plural_no_tooltip_lowercase$ 
+ #  $knight_culture_player_no_tooltip$
+ # [ROOT.Char.GetFaith.NegativeAfterLife]
+ # [ROOT.Char.GetFaith.HighGodName]

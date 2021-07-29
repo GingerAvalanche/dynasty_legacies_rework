@@ -1,0 +1,60 @@
+﻿#######################################################
+ # prestige RANDOM EVENTS DESC
+ #######################################################
+ 
+ l_english:
+ 
+
+ #1
+ knight_random_event_title:0 "$knight_culture_player_no_tooltip$ of Great Value"
+ knight_random_event_desc:0 "Apparently my donation to the court nobles had an unexpected effect.\n\nToday at my daily meeting with with the peasants in the courtyard, a subject asked me for coin so he could settle a debt.\n\n"Your Highness's generosity is well known throughout the realm.."\n"If you be so kind.. Please help me break my debt!""  
+ knight_random_event_op_welcome:0 "You will work for the coin!"
+ knight_random_event_op_welcome_t:0 "The peasant will be added to your court"
+ knight_random_event_op_help:0 "Here. May this coin be of use."
+ knight_random_event_op_help_t:0 "You give him the money he needs"
+ knight_random_event_op_exit:0 "Get out of my sight!"
+ knight_random_event_op_exit_t:0 "You don't help or recruit the peasant"
+ #2
+ noblehook_random_event_title:0 "Noble Needs"
+ noblehook_random_event_desc:0 "Apparently my donations to the court have been the main topic of conversation throughout the realm.\n\nToday at my daily meeting in the courtyard, a subject of some repute from one nearby city, asked me for coin so he could settle a dispute.\n\n"My Liege it is with great shame that I come to you."\n"But I have no other to call for aid."\n"If you would help me I will forever be in your debt.""  
+ noblehook_random_event_op_welcome:0 "I will settle the dispute, but you will work for me"
+ noblehook_random_event_op_welcome_t:0 "The noble will be added to your court."
+ noblehook_random_event_op_help:0 "Here. May this coin be of use."
+ noblehook_random_event_op_help_t:0 "You give him the money he needs"
+ noblehook_random_event_op_exit:0 "Get out of my sight!"
+ noblehook_random_event_op_exit_t:0 "You don't help or recruit the noble"
+ #3
+ nobleRND_random_event_title:0 "Coin creates wealth"
+ nobleRND_random_event_desc:0 "My generous donations to the court have been attracting all sorts of subjects from around the realm.\n\nToday at the courtyard, a highly skilled man approached me and asked for monetary help.\n\n"My Honourable Liege I have no other to call for aid."\n"If you would help me I will make sure everyone in town ears of you generosity.""  
+ nobleRND_random_event_op_welcome:0 "Actually, I could use someone like you."
+ nobleRND_random_event_op_welcome_t:0 "The peasant will be added to your court"
+ nobleRND_random_event_op_help:0 "Here. May this coin be of use."
+ nobleRND_random_event_op_help_t:0 "You give him the money he needs"
+ nobleRND_random_event_op_exit:0 "Get out of my sight!"
+ nobleRND_random_event_op_exit_t:0 "You don't help or recruit the peasant"
+ #4
+ beggar_random_event_title:0 "Beggars will beg"
+ beggar_random_event_desc:0 "My donations to my subjects have been attracting all sorts of peasants from around the realm.\n\nBut today at the courtyard, I got one most unexpected visit.\n\n"My Honourable, Excelent-excelenci..al.. Magnificent, MARVELLOUS!!"\n"King-Lord.. LIEGE!"\n"Your glory is glorious!!"\n"I need coins to fill my belly!"\n"Not that I mean to eat the coins you see..""  
+ beggar_random_event_op_welcome:0 "Hmm.. I could use someone like you."
+ beggar_random_event_op_welcome_t:0 "The beggar will be added to your court"
+ beggar_random_event_op_help:0 "Yeah yeah. Give this man some food and coin! And put him outside!"
+ beggar_random_event_op_help_t:0 "You help the beggar"
+ beggar_random_event_op_exit:0 "Get out of my sight you peasant scum!"
+ beggar_random_event_op_exit_t:0 "You don't help or recruit the beggar"
+ 
+ #######################################################
+ # dynamic tags
+ #######################################################
+ # [ROOT.Char.GetFaith.ReligiousSymbol]
+ # [ROOT.Char.GetFaith.GetAdherentName]
+ # [ROOT.Char.GetFaith.PriestNeuter]
+ # [ROOT.Char.GetFaith.PriestNeuterPlural]
+ # [ROOT.Char.GetFaith.HouseOfWorship]
+ # [ROOT.Char.GetFaith.HouseOfWorshipPlural]
+ # [ROOT.Char.GetFaith.BishopNeuter]
+ # [ROOT.Char.GetFaith.PositiveAfterLife]
+ # [ROOT.Char.Custom('FortifiedBuilding')]
+ #  $knight_culture_player_plural_no_tooltip_lowercase$ 
+ #  $knight_culture_player_no_tooltip$
+ # [ROOT.Char.GetFaith.NegativeAfterLife]
+ # [ROOT.Char.GetFaith.HighGodName]

@@ -1,0 +1,344 @@
+﻿namespace = vassals_to_arms
+
+# Top liege calls all subjects to protect against an attacker, if they are affected by this war (would lose land)
+vassals_to_arms.0001 = {
+
+	type = character_event
+
+	title = vassals_to_arms.0001.t
+	desc = vassals_to_arms.0001.desc
+
+	theme = war
+
+	trigger = {
+		is_at_war_with_liege = no
+		NOR = {
+			is_defender_in_war = scope:war
+			is_attacker_in_war = scope:war
+		}	
+	}
+
+	override_background = {
+		event_background = battlefield
+	}
+
+	left_portrait = {
+		character = scope:defender
+		animation = worry
+	}
+
+	right_portrait = {
+		character = ROOT
+		animation = war_over_win
+	}
+
+	# Join war
+	option = {
+		name = vassals_to_arms.0001.a
+		scope:war = { add_defender = ROOT }
+
+		ai_chance = {
+			base = 30
+
+			# Subjugation cb => I will become a subject of the attacker
+			modifier = {
+				factor = 0.5
+				scope:war = {
+					using_cb = tribal_subjugation_cb
+				}
+				exists = ROOT.liege
+				OR = {
+					has_relation_rival = ROOT.liege
+					opinion = {
+						target = ROOT.liege
+						value <= 25
+					}
+					ROOT.liege = { tyranny > 20 }
+				}
+			}
+
+			# Is holy war and I have the same faith as the attacker
+			modifier = {
+				factor = 0.5
+				exists = scope:war_target_title
+				vta_vassalize_religious_war = {
+					WAR = scope:war
+					ATTACKER = scope:attacker
+					DEFENDER = scope:defender
+					CHARACTER = ROOT
+					TITLE = scope:war_target_title
+				}
+			}
+
+			# I will be vassalized
+			modifier = {
+				factor = 0.5
+				exists = scope:war_target_title
+				vta_vassalize_war = {
+					WAR = scope:war
+					ATTACKER = scope:attacker
+					DEFENDER = scope:defender
+					CHARACTER = ROOT
+					TITLE = scope:war_target_title
+				}
+			}
+
+			# I will be vassalized
+			modifier = {
+				factor = 0.5
+				AND = { scope:war = { using_cb = tribal_subjugation_cb } }
+			}
+
+			modifier = {
+				factor = 2
+				exists = ROOT.liege
+				OR = {
+					opinion = {
+						target = ROOT.liege
+						value >= 75
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_trait = brave
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = honest
+					has_trait = just
+					has_trait = trusting
+				}
+			}
+
+			# Would not lose any title and has game rule set to "Title Loss"
+			modifier = {
+				factor = 0
+				has_game_rule = vta_rule_land
+				OR = {
+					AND = {
+						exists = scope:war_target_title
+						vta_vassalize_religious_war = {
+							WAR = scope:war
+							ATTACKER = scope:attacker
+							DEFENDER = scope:defender
+							CHARACTER = ROOT
+							TITLE = scope:war_target_title
+						}
+					}
+					AND = {
+						exists = scope:war_target_title
+						vta_vassalize_war = {
+							WAR = scope:war
+							ATTACKER = scope:attacker
+							DEFENDER = scope:defender
+							CHARACTER = ROOT
+							TITLE = scope:war_target_title
+						}
+					}
+					AND = {
+						scope:war = { using_cb = tribal_subjugation_cb }
+					}
+				}
+			}
+			
+		}
+	}
+
+	# Don't join war
+	option = {
+		name = vassals_to_arms.0001.b
+
+		ai_chance = {
+			base = 0
+
+			# Is holy war and I will be vassalized (lower faith antipathy of attacker than from liege)
+			modifier = {
+				add = 30
+				exists = scope:war_target_title
+				vta_vassalize_religious_war = {
+					WAR = scope:war
+					ATTACKER = scope:attacker
+					DEFENDER = scope:defender
+					CHARACTER = ROOT
+					TITLE = scope:war_target_title
+				}
+			}
+
+			# I will be vassalized
+			modifier = {
+				add = 30
+				exists = scope:war_target_title
+				vta_vassalize_war = {
+					WAR = scope:war
+					ATTACKER = scope:attacker
+					DEFENDER = scope:defender
+					CHARACTER = ROOT
+					TITLE = scope:war_target_title
+				}
+			}
+
+			# I will be vassalized through subjugation cb
+			modifier = {
+				add = 30
+				scope:war = { using_cb = tribal_subjugation_cb }
+			}
+
+			# I don't like my liege and I won't lose land, because 0 * 2 is still 0
+			modifier = {
+				factor = 2
+				exists = ROOT.liege
+				OR = {
+					has_relation_rival = ROOT.liege
+					opinion = {
+						target = ROOT.liege
+						value <= 25
+					}
+				}
+			}
+
+			# Some traits increasing the chance to not join the war
+			modifier = {
+				factor = 2
+				OR = {
+					has_trait = content
+					has_trait = craven
+					has_trait = lazy
+					has_trait = fickle
+					has_trait = arbitrary
+				}
+			}
+
+			# Has some titles outside the war target => would lose land
+			modifier = {
+				factor = 0
+				exists = scope:war_target_title
+				NOT = {
+					scope:war_target_title.tier = tier_county
+					any_sub_realm_county = {
+						count = all
+						target_is_de_jure_liege_or_above = scope:war_target_title
+					}
+				}
+			}
+		}
+
+	}
+}
+
+vassals_to_arms.0002 = {
+
+	type = character_event
+
+	title = vassals_to_arms.0002.t
+	desc = vassals_to_arms.0002.desc
+
+	theme = war
+
+	trigger = {
+		is_at_war_with_liege = no
+	}
+
+	left_portrait = {
+		character = scope:defender
+		animation = worry
+	}
+
+	right_portrait = {
+		character = ROOT
+		animation = war_over_win
+	}
+
+	# Join war
+	option = {
+		name = vassals_to_arms.0002.a
+
+		ai_chance = {
+			base = 30
+
+			modifier = {
+				factor = 2
+				has_trait = ambitious
+			}
+
+			modifier = {
+				factor = 0.5
+				has_trait = content
+			}
+		}
+
+		scope:war = { add_attacker = ROOT }
+	}
+
+	# Don't join war
+	option = {
+		name = vassals_to_arms.0002.b
+
+		ai_chance = {
+			base = 0
+
+			modifier = {
+				add = 15
+				is_at_war_as_defender = yes
+			}
+
+			modifier = {
+				add = 15
+				OR = {
+					has_trait = content
+					has_trait = craven
+					has_trait = lazy
+				}
+			}
+
+			modifier = {
+				factor = 0.25
+				OR = {
+					has_trait = ambitious
+					has_trait = brave
+					has_trait = diligent
+				}
+			}
+
+		}
+	}
+}
+
+#vassals_to_arms.0003 = {
+#
+#	type = character_event
+#
+#	title = vassals_to_arms.0002.t
+#	desc = vassals_to_arms.0002.desc
+#
+#	theme = war
+#
+#	left_portrait = {
+#		character = ROOT
+#		animation = worry
+#	}
+#
+#	immediate = {
+#		every_vassal = {
+#			set_variable = {
+#				name = military_strength
+#				value = 0
+#			}
+#			every_held_title = {
+#				limit = { tier = tier_county }
+#				save_temporary_scope_as = holding
+#				holder = {
+#					change_variable = {
+#						name = military_strength
+#						add = scope:holding.county_levies_to_raise
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = "Test124"
+#	}
+#}

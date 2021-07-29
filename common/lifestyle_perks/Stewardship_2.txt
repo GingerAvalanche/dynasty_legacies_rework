@@ -1,0 +1,14 @@
+﻿
+# Divided Attention
+divided_attention_perk = {
+	lifestyle = stewardship_lifestyle
+	tree = domain
+	position = { 1 4 }
+	icon = node_stewardship
+	
+	parent = popular_figurehead_perk
+	
+	character_modifier = {
+		domain_limit = 1
+	}
+}
