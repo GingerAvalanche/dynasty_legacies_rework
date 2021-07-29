@@ -1,19 +1,13 @@
-﻿
-### Legacy - culture perks
-
-
-	culture_1_perk = {
+﻿### Legacy - culture perks
+culture_1_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 0 0 }
 	icon = node_legacy
 
-	auto_selection_weight = {
-		value = 11
+	auto_selection_weight = { value = 11 }
 
-	}
-
-		character_modifier = {
+	character_modifier = {
 		cultural_head_fascination_mult = 0.10
 	}
 
@@ -22,10 +16,9 @@
 			text = cultural_propaganda_perk_effect
 		}
 	}
+}
 
-	}
-
-	culture_2_perk = {
+culture_2_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 0 1 }
@@ -33,24 +26,20 @@
 
 	parent = culture_1_perk
 
-	auto_selection_weight = {
-		value = 11
+	auto_selection_weight = { value = 11 }
 
-	}
-
-		character_modifier = {
+	character_modifier = {
 		cultural_head_fascination_mult = 0.10
 	}
 
-		effect = {
+	effect = {
 		custom_description_no_bullet = {
 			text = cultural_expansion_perk_effect
 		}
 	}
+}
 
-	}
-
-	culture_3_perk = {
+culture_3_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 0 2 }
@@ -58,38 +47,29 @@
 
 	parent = culture_2_perk
 
-	auto_selection_weight = {
-		value = 11
+	auto_selection_weight = { value = 11 }
 
-	}
-
-		character_modifier = {
+	character_modifier = {
 		title_creation_cost_mult = -0.5
 		cultural_head_fascination_mult = 0.10
 	}
+}
 
-	}
-
-	culture_4_perk = {
+culture_4_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 2 0 }
 	icon = node_legacy
 
-
-	auto_selection_weight = {
-		value = 11
-
-	}
+	auto_selection_weight = { value = 11 }
 
 	character_modifier = {
-	county_opinion_add = 25
-	monthly_county_control_change_add = 0.3
+		county_opinion_add = 25
+		monthly_county_control_change_add = 0.3
 	}
+}
 
-	}
-
-	culture_5_perk = {
+culture_5_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 2 1 }
@@ -97,19 +77,15 @@
 
 	parent = culture_4_perk
 
-	auto_selection_weight = {
-		value = 11
-
-	}
+	auto_selection_weight = { value = 11 }
 
 	character_modifier = {
-	powerful_vassal_opinion = 10
-	character_capital_county_monthly_development_growth_add = 0.3
+		powerful_vassal_opinion = 10
+		character_capital_county_monthly_development_growth_add = 0.3
 	}
+}
 
-	}
-
-	culture_6_perk = {
+culture_6_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 2 2 }
@@ -117,19 +93,15 @@
 
 	parent = culture_5_perk
 
-	auto_selection_weight = {
-		value = 11
-
-	}
+	auto_selection_weight = { value = 11 }
 
 	character_modifier = {
-	mercenary_hire_cost_mult = -0.25
-	different_culture_opinion = -15
+		mercenary_hire_cost_mult = -0.25
+		different_culture_opinion = -15
 	}
+}
 
-	}
-
-	culture_7_perk = {
+culture_7_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 1 3 }
@@ -138,25 +110,21 @@
 	parent = culture_3_perk
 	parent = culture_6_perk
 
-	auto_selection_weight = {
-		value = 11
-
-	}
+	auto_selection_weight = { value = 11 }
 
 	character_modifier = {
-	realm_priest_opinion = 15
-	knight_limit = 4
+		realm_priest_opinion = 15
+		knight_limit = 4
 	}
-		effect = {
+
+	effect = {
 		custom_description_no_bullet = {
 			text = heavenly_touched_perk_effect
 		}
 	}
+}
 
-
-	}
-
-	culture_8_perk = {
+culture_8_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 1 4 }
@@ -164,18 +132,14 @@
 
 	parent = culture_7_perk
 
-	auto_selection_weight = {
-		value = 11
-
-	}
+	auto_selection_weight = { value = 11 }
 
 	character_modifier = {
-	same_culture_opinion = 15
+		same_culture_opinion = 15
 	}
+}
 
-	}
-
-	culture_9_perk = {
+culture_9_perk = {
 	lifestyle = legacy_lifestyle
 	tree = culture
 	position = { 1 5 }
@@ -183,15 +147,13 @@
 
 	parent = culture_8_perk
 
-	auto_selection_weight = {
-		value = 11
-
-	}
+	auto_selection_weight = { value = 11 }
 
 	effect = {
-     add_trait_force_tooltip = innovator
+		add_trait_force_tooltip = innovator
 
-	 custom_description_no_bullet = {
+		custom_description_no_bullet = {
 			text = innovator_perk_effect
 		}
-	 }
+	}
+}
