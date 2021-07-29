@@ -67,10 +67,11 @@
   action_lifestyle_legacy_click:0 "$action_can_spend_perk_point_click$"
 
   # Perk effects #
-  CULTURAL_PROPAGANDA_PERK:0 "Boost to the cultural promotion action"
-  CULTURAL_EXPANSION_PERK:0 "Boost to the claim fabrication action"
-  HEAVENLY_TOUCHED_PERK:0 "Boost to the faith convertion action"
-  INNOVATOR_PERK:0 "Boost to the title integration action"
+  CULTURAL_PROPAGANDA_PERK:0 "[promote_culture|E] Effectiveness: #P +[EmptyScope.ScriptValue('cultural_propaganda_perk_percentage')|0]%#! of #bold your#! [stewardship|E]"
+  CULTURAL_EXPANSION_PERK:0 "[fabricate_claim|E] Effectiveness: #P +[EmptyScope.ScriptValue('cultural_expansion_perk_percentage')|0]%#! of #bold your#! [learning|E]"
+  REALM_DEVELOPMENT_PERK:0 "[develop_county|E] Effectiveness: #P +[EmptyScope.ScriptValue('realm_development_perk_percentage')|2]%#! of #bold your#! [stewardship|E]"
+  HEAVENLY_TOUCHED_PERK:0 "[convert_county|E] Effectiveness: #P +[EmptyScope.ScriptValue('heavenly_touched_perk_percentage')|0]%#! of #bold your#! [learning|E]"
+  INNOVATOR_PERK:0 "[integrate_title|E] Effectiveness: #P +[EmptyScope.ScriptValue('innovator_perk_percentage')|2]%#! of #bold your#! [diplomacy|E]"
 
   # Other
   dynn_Manul:0 "Manul"
@@ -80,6 +81,8 @@
   STEWARD_PROGRESS_BONUS:0 "Ruler bonus"
   monthly_legacy_lifestyle_xp_gain_mult:0 "Monthly legacy [lifestyle|E] Experience"
   NOT_CHARACTER_HAS_THIS_OPINION_OF_TARGET_OR_ABOVE:0 "Reputation is too low"
+  game_concept_integrate_title:0 "$task_integrate_title$"
+  game_concept_integrate_title_desc:0 "A [councillor_task|E] performed by the [chancellor|E]. If you are an [emperor|E], it targets a [kingdom|E]. If you are a king, it targets a [duchy|E]. It speeds up [de_jure_drift|E] and is a good way to get rid of the [rightful_liege|E] penalty."
 
   # Legacy lifestyle Effects NOT WORKING#
 
@@ -110,7 +113,12 @@
   TARGET_GAINS_A_LEGACY_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [legacy_lifestyle|E] [perk|E] Unlock"
   TARGET_GAINED_A_LEGACY_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [legacy_lifestyle|E] [perk|E] Unlock"
 
-
+  # Legacy lifestyle councilor task modifiers #
+  PROMOTE_CULTURE_LEGACY_PERK_BONUS_VALUE:1 "[GetPerk('culture_1_perk').GetName(GetPlayer)]"
+  FABRICATE_CLAIM_LEGACY_PERK_BONUS_VALUE:1 "[GetPerk('culture_2_perk').GetName(GetPlayer)]"
+  DEVELOP_COUNTY_LEGACY_PERK_BONUS_VALUE:1 "[GetPerk('culture_5_perk').GetName(GetPlayer)]"
+  CONVERSION_LEGACY_PERK_BONUS_VALUE:1 "[GetPerk('culture_7_perk').GetName(GetPlayer)]"
+  INTEGRATE_TITLE_LEGACY_PERK_BONUS_VALUE:1 "[GetPerk('culture_9_perk').GetName(GetPlayer)]"
 
   # Prisoner decision #
   prisoner_decision:0 "Get a new prisoner"

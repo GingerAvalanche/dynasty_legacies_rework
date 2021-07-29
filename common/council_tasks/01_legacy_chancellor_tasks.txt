@@ -133,6 +133,15 @@
 				desc = INTEGRATE_TITLE_DYNASTY_PERK_BONUS_VALUE
 			}
 		}
+		if = {
+			limit = {
+				scope:councillor_liege = { has_perk = culture_9_perk }
+			}
+			add = {
+				value = scope:councillor.chancellor_integrate_title_legacy_perk_bonus
+				desc = INTEGRATE_TITLE_LEGACY_PERK_BONUS_VALUE
+			}
+		}
 	}
 
 	on_monthly_county = {

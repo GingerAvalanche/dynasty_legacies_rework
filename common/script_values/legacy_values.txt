@@ -1,0 +1,67 @@
+﻿cultural_expansion_perk_percentage = 10
+cultural_propaganda_perk_percentage = 5
+heavenly_touched_perk_percentage = 5
+innovator_perk_percentage = 1.75
+realm_development_perk_percentage = 8.75
+
+chancellor_integrate_title_legacy_perk_bonus = {
+	value = 0
+	if = {
+		limit = { exists = scope:county }
+		add = scope:councillor_liege.diplomacy
+		multiply = innovator_perk_percentage
+		divide = 100
+	}
+}
+
+court_chaplain_fabricate_claim_legacy_perk_bonus = {
+	value = 0
+	if = {
+		limit = { exists = scope:county }
+		add = scope:councillor_liege.learning
+		multiply = cultural_expansion_perk_percentage
+		divide = 100
+	}
+}
+
+court_chaplain_conversion_legacy_perk_bonus = {
+	value = 0
+	if = {
+		limit = { exists = scope:county }
+		add = scope:councillor_liege.learning
+		multiply = heavenly_touched_perk_percentage
+		divide = 100
+	}
+}
+
+steward_promote_culture_legacy_perk_bonus = {
+	value = 0
+	if = {
+		limit = { exists = scope:county }
+		add = scope:councillor_liege.stewardship
+		multiply = cultural_propaganda_perk_percentage
+		divide = 100
+	}
+}
+
+steward_develop_county_legacy_perk_bonus = {
+	value = 0
+	if = {
+		limit = { exists = scope:county }
+		add = scope:councillor_liege.stewardship
+		multiply = realm_development_perk_percentage
+		divide = 100
+	}
+}
+
+steward_develop_county_total = {
+	add = steward_develop_county_base
+	add = steward_develop_county_monthly_increase
+	add = steward_develop_county_monthly_increase_friend_bonus
+	add = steward_develop_county_monthly_increase_best_friend_bonus
+	add = steward_develop_county_monthly_increase_rival_bonus
+	add = steward_develop_county_monthly_increase_nemesis_bonus
+	add = steward_develop_county_perk_bonus_monthly_increase
+	add = steward_develop_county_erudition_bonus_monthly_increase
+	add = steward_develop_county_legacy_perk_bonus
+}

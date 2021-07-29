@@ -104,6 +104,15 @@
 				desc = CONVERSION_DYNASTY_PERK_BONUS_VALUE
 			}
 		}
+		if = {
+			limit = {
+				scope:councillor_liege = { has_perk = culture_7_perk }
+			}
+			add = {
+				value = scope:councillor.court_chaplain_conversion_legacy_perk_bonus
+				desc = CONVERSION_LEGACY_PERK_BONUS_VALUE
+			}
+		}
 		# Relation Bonuses/Penalties
 		if = { # Friend
 			limit = {
@@ -776,6 +785,15 @@ task_fabricate_claim = {
 			add = {
 				value = scope:councillor.court_chaplain_fabricate_claim_dynasty_perk_bonus
 				desc = FABRICATE_CLAIM_DYNASTY_PERK_BONUS_VALUE
+			}
+		}
+		if = {
+			limit = {
+				scope:councillor_liege = { has_perk = culture_2_perk }
+			}
+			add = {
+				value = scope:councillor.court_chaplain_fabricate_claim_legacy_perk_bonus
+				desc = FABRICATE_CLAIM_LEGACY_PERK_BONUS_VALUE
 			}
 		}
 

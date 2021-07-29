@@ -1,0 +1,11 @@
+legacy_lifestyle = {
+	texture = "gfx/interface/icons/alerts/action_lifestyle_legacy.dds"
+	framesize = { 144 144 }
+	frame = 2
+	parent = focus
+}
+
+integrate_title = {
+	parent = councillor_task
+	texture = "gfx/interface/icons/council_task_types/task_integrate_title.dds"
+}
